@@ -1,0 +1,124 @@
+//
+/* Extra small devices (phones, up to 480px) */
+/* No media query since this is the default in Bootstrap */
+@dark-blue:#1A395C;
+@light-blue:#4D8CC2;
+
+html,body{
+	width: 100%;
+	height: 100%;
+}
+
+header{
+	background: url(../images/bgheader.png) center top;
+	height: 100%;
+	border-bottom: 2px solid @dark-blue;
+
+	
+	/*
+	 * logo and share and user.
+	 */
+	.siteinfo{
+		background: #fff;
+		
+		.logo{
+			padding: 12px 0;
+			
+			img{
+				height: 48px;
+			}
+		}
+		
+		.share, .user{
+			padding-left: 24px;
+			float: left;
+		}
+		
+		.share{
+			padding-top: 25px;
+		}
+		
+		.user{
+			font-size: 20px;
+			line-height: 72px;
+			
+			.login{
+				.transition(1s);				
+			}
+			.login:hover{
+				text-decoration: none;
+			}
+			
+			.register{
+				margin-left: 12px;
+				padding-top: -2px;
+				vertical-align: baseline;
+				.transition(1s);
+			}
+		}
+	}
+	
+	
+	/*
+	 * for nav area
+	 */
+	
+	.nav-wrapper{
+		background: @dark-blue;
+		border-top: 4px solid #F8AB3E;
+		
+		ul{
+			
+			li>a{
+				color: #fff;
+				text-decoration: none;
+				line-height: 32px;
+				font-size: 18px;
+				padding: 6px 15px;
+				.transition(1s);
+
+				
+				&:hover{
+					background: @light-blue;
+					color: #fff;
+				}
+			}
+		}
+	}
+	
+	/*
+	 * for banner area
+	 */
+	
+	.banner{
+		
+		.item{
+			height: 480px;
+		}
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm) { 
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg) { 
+	header {
+		height: 720px;
+		padding-top: 48px;
+		padding-bottom: 24px;
+	}
+}
+
+
+
+
+
+
