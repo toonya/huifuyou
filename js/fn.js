@@ -1,3 +1,3 @@
-jQuery(function($){
-	$('.current-menu-item').addClass('active');
+jQuery(function($) {
+    $('.current-menu-item').addClass('active');
 })

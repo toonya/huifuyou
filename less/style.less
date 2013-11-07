@@ -1,6 +1,7 @@
 //
 /* Extra small devices (phones, up to 480px) */
 /* No media query since this is the default in Bootstrap */
+
 @dark-blue:#1A395C;
 @light-blue:#4D8CC2;
 
@@ -8,30 +9,38 @@ html,body{
 	width: 100%;
 	height: 100%;
 }
+.container{
+	max-width: 100%;
+	padding: 0;
+}
+.container-padding{
+	padding: 0 15px;
+}
 
 header{
-	background: url(../images/bgheader.png) center top;
 	height: 100%;
 	border-bottom: 2px solid @dark-blue;
-
+	background: url(../images/bgheader.png) center top;
+	background-size: cover;
 	
 	/*
 	 * logo and share and user.
 	 */
 	.siteinfo{
 		background: #fff;
+		.container-padding();
 		
 		.logo{
 			padding: 12px 0;
-			
+
 			img{
 				height: 48px;
 			}
 		}
 		
 		.share, .user{
-			padding-left: 24px;
 			float: left;
+			padding-left: 24px;
 		}
 		
 		.share{
@@ -50,10 +59,10 @@ header{
 			}
 			
 			.register{
+				.transition(1s);
 				margin-left: 12px;
 				padding-top: -2px;
 				vertical-align: baseline;
-				.transition(1s);
 			}
 		}
 	}
@@ -64,18 +73,18 @@ header{
 	 */
 	
 	.nav-wrapper{
-		background: @dark-blue;
 		border-top: 4px solid #F8AB3E;
+		background: @dark-blue;
 		
 		ul{
 			
 			li>a{
+				.transition(1s);
+				padding: 6px 15px;
 				color: #fff;
 				text-decoration: none;
-				line-height: 32px;
 				font-size: 18px;
-				padding: 6px 15px;
-				.transition(1s);
+				line-height: 32px;
 
 				
 				&:hover{
@@ -95,12 +104,29 @@ header{
 		.item{
 			height: 480px;
 		}
+		
+		// here is the banner nav area
+		.carousel-nav-type{
+			left: 0;
+			display: table;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+
+			li{
+				display: table-cell;
+				padding: 12px;
+				border-radius: 0;
+				text-align: center;
+				text-indent: 0;
+			}
+		}
 	}
 }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm) { 
-
+	
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -110,10 +136,13 @@ header{
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: @screen-lg) { 
+	.container{
+		max-width: @container-lg-desktop;
+	}
 	header {
-		height: 720px;
 		padding-top: 48px;
 		padding-bottom: 24px;
+		height: 720px;
 	}
 }
 
