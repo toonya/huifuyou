@@ -1,5 +1,5 @@
 <?php
-function zzyy_setup() {
+function hfy_setup() {
 	/*
 	 * Makes Twenty Twelve available for translation.
 	 *
@@ -19,7 +19,8 @@ function zzyy_setup() {
 	//add_theme_support( 'post-formats', array( 'aside', 'image', 'link', 'quote', 'status' ) );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menu( 'nav', '默认菜单' );	/*
+	//register_nav_menu( 'nav', '默认菜单' );
+	/*
 	 * This theme supports custom background color and image, and here
 	 * we also set up the default background color.
 	 */
@@ -33,15 +34,170 @@ add_theme_support( 'custom-background', array(
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 624, 9999 ); // Unlimited height, soft crop
 }
-add_action( 'after_setup_theme', 'zzyy_setup' );
+add_action( 'after_setup_theme', 'hfy_setup' );
 
+
+
+// ----------------------------------------
+// ! add js for background
+// ----------------------------------------
+
+function load_admin_media_support() {
+	wp_enqueue_style( 'admin.css', get_template_directory_uri() . '/css/admin.css' );
+	wp_enqueue_script( 'admin.js', get_template_directory_uri() . '/js/admin.js', array('jquery'), '1.0.0', true );
+}
+
+add_action( 'admin_enqueue_scripts', 'load_admin_media_support' );
+
+// ----------------------------------------
+// ! remove welcome information
+// ----------------------------------------
+
+remove_action( 'welcome_panel', 'wp_welcome_panel' );
+
+// ----------------------------------------
+// ! remove some role
+// ----------------------------------------
+
+remove_role( 'subscriber' );
+remove_role( 'contributor' );
+remove_role( 'author' );
+remove_role( 'editor' );
+
+// ----------------------------------------
+// ! add custom role
+// ----------------------------------------
+
+$result = add_role(
+	'员工',
+	'员工',
+	array(
+		'read'         => true,  // True allows this capability
+		'edit_posts'   => false,
+		'delete_posts' => false, // Use false to explicitly deny
+	)
+);
+
+// ----------------------------------------
+// ! remove toolbar node
+// ----------------------------------------
+
+add_action( 'admin_bar_menu', 'remove_wp_logo', 999 );
+
+function remove_wp_logo( $wp_admin_bar ) {
+	$wp_admin_bar->remove_node( 'comments' );
+	$wp_admin_bar->remove_node( 'wp-logo' );
+	$wp_admin_bar->remove_node( 'new-content' );
+}
+
+// ----------------------------------------
+// ! regist some menu.
+// ----------------------------------------
 
 function register_my_menus() {
   register_nav_menus(
     array(
-      'header-menu' => __( '页头' ),
-      'extra-menu' => __( '其它' )
+      'header-menu' => __( '页头' )
     )
   );
 }
 add_action( 'init', 'register_my_menus' );
+
+// ----------------------------------------
+// ! cunstomer system page
+// ----------------------------------------
+
+add_action( 'admin_menu', 'my_menu_pages');
+function my_menu_pages() {
+	//remove page
+	$cc_remove_page = array(
+		'edit.php',
+		'tools.php',
+		'index.php',
+		'upload.php',
+		'post-new.php?post_type=page',
+		'edit-comments.php',
+		'themes.php',
+		'plugins.php',
+		'options-general.php'
+		);
+
+	foreach($cc_remove_page as $id=>$menu){
+		remove_menu_page($menu);
+	}
+	//remove subpage
+	$remove_submenu_page = array(
+		'edit.php?post_type=page' => 'post-new.php?post_type=page',
+		'edit.php' => 'post-new.php',
+		'users.php' => 'profile.php'
+		);
+
+	foreach($remove_submenu_page as $menu=>$submenu){
+		remove_submenu_page($menu,$submenu);
+	};
+	remove_submenu_page('edit.php','edit-tags.php?taxonomy=category');
+	remove_submenu_page('edit.php','edit-tags.php?taxonomy=post_tag');
+	remove_submenu_page('users.php','user-new.php');
+
+	//add page
+	add_menu_page( '通知', '通知', 'manage_options', 'edit.php', '', '', 6 );
+	add_menu_page( '导航', '导航', 'manage_options', 'nav-menus.php', '', '', 21);
+}
+
+
+// ----------------------------------------
+// ! remove dashboard widgets
+// ----------------------------------------
+function remove_dashboard_widgets(){
+  global $wp_meta_boxes;
+  unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
+  unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_recent_drafts']);
+  unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments']);
+  unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
+  unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);
+  unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']);
+  unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
+  unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
+}
+
+add_action('wp_dashboard_setup', 'remove_dashboard_widgets');
+
+// ----------------------------------------
+// ! add customer dashboard widgets
+// ----------------------------------------
+add_action('wp_dashboard_setup','add_dashboard_widgets');
+
+$custom_dashboard_widgets = array(
+    'my-dashboard-widget' => array(
+        'title' => '汇付友',
+        'callback' => 'dashboardWidgetContent'
+    )
+);
+
+function dashboardWidgetContent() {
+	echo '祝全体员工工作顺利!';
+}
+
+
+function add_dashboard_widgets() {
+    global $custom_dashboard_widgets;
+
+    foreach ( $custom_dashboard_widgets as $widget_id => $options ) {
+        wp_add_dashboard_widget(
+            $widget_id,
+            $options['title'],
+            $options['callback']
+        );
+    }
+}
+
+// ----------------------------------------
+// ! admin footer
+// ----------------------------------------
+
+add_action('admin_footer_text', 'my_admin_footer_function');
+function my_admin_footer_function() {
+	echo '同雅设计';
+}
+
+
