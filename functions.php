@@ -140,7 +140,7 @@ function my_menu_pages() {
 	remove_submenu_page('users.php','user-new.php');
 
 	//add page
-	add_menu_page( '通知', '通知', 'manage_options', 'edit.php', '', '', 6 );
+	add_menu_page( '新闻', '新闻', 'manage_options', 'edit.php', '', '', 6 );
 	add_menu_page( '导航', '导航', 'manage_options', 'nav-menus.php', '', '', 21);
 }
 
@@ -200,4 +200,57 @@ function my_admin_footer_function() {
 	echo '同雅设计';
 }
 
+// ----------------------------------------
+// ! add news for employee
+// ----------------------------------------
+function employee_news() {
+  $default = array(
+		'name' => '员工通知',
+		'slug' => 'employee_news'
+	);
 
+  $labels = array(
+    'name' => $default['name'],
+    'singular_name' => $default['name'],
+    'add_new' => '添加新'.$default['name'],
+    'add_new_item' => '添加新'.$default['name'],
+    'edit_item' => '编辑'.$default['name'].'信息',
+    'new_item' => '添加新'.$default['name'],
+    'all_items' => '全部'.$default['name'],
+    'view_item' => '浏览该'.$default['name'],
+    'search_items' => '查找'.$default['name'],
+    'not_found' =>  '没有发现',
+    'not_found_in_trash' => '垃圾箱中没有',
+    'parent_item_colon' => '',
+    'menu_name' => $default['name']
+  );
+
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'query_var' => true,
+	//Provide a callback function that will be called when setting up the meta boxes for the edit form. Do remove_meta_box() and add_meta_box() calls in the callback.
+	//'register_meta_box_cb' => '',
+	//'with_front' => bool Should the permastruct be prepended with the front base. (example: if your permalink structure is /blog/, then your links will be: false->/news/, true->/blog/news/). Defaults to true
+    'rewrite' => array( 'slug' => $default['slug'] ),
+    'capability_type' => 'post',
+    'has_archive' => true,
+    'hierarchical' => false,
+    'menu_position' => null,
+    'supports' => array( 'title', 'editor','thumbnail', 'excerpt' )
+  );
+
+  register_post_type( $default['slug'], $args );
+}
+if(!post_type_exists('employee_news'))
+	add_action( 'init', 'employee_news' );
+
+
+// ----------------------------------------
+// ! custom page support
+// ----------------------------------------
+
+require_once('functions/custom-page.php');
