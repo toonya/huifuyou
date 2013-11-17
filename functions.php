@@ -247,3 +247,11 @@ function employee_news() {
 }
 if(!post_type_exists('employee_news'))
 	add_action( 'init', 'employee_news' );
+
+// ----------------------------------------
+// ! custom page
+// ----------------------------------------
+
+require_once('custom_page/custom-page.php');
+
+
