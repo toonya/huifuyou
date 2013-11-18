@@ -6,7 +6,7 @@
         <!-- Bootstrap -->
         <link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="<?php echo get_template_directory_uri(); ?>/style.css" rel="stylesheet" media="screen">
-        
+
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/html5shiv.js"></script>
@@ -14,7 +14,7 @@
 <![endif]-->
         <?php wp_head(); ?>
     </head>
-    <body>		
+    <body>
     	<!-- class="auto-add-bg bg-cover" data-bg-src="<?php echo get_template_directory_uri();?>/images/bgheader.jpg" -->
         <header>
             <div class="siteinfo">
@@ -43,6 +43,7 @@
             <!-- end siteinfo -->
             <nav class="nav-wrapper"><div class="container"><?php wp_nav_menu( array( 'theme_location' => 'header-menu','container'=>'false','menu_class'=>'nav nav-justified' ) );?></div></nav>
             <!-- end nav -->
+            <?php if(is_home()):;?>
             <div id="banner" class="carousel slide">
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
@@ -52,7 +53,7 @@
                     <div data-bg-src="<?php echo get_template_directory_uri();?>/images/assets/banner-1.jpg" class="item auto-add-bg"></div>
                     <div data-bg-src="<?php echo get_template_directory_uri();?>/images/assets/banner-1.jpg" class="item auto-add-bg"></div>
                 </div>
-                
+
                 <!-- Indicators -->
                 <ol class="carousel-nav">
                     <li data-target="#banner" data-slide-to="0" class="active">小生意POS机</li>
@@ -61,7 +62,8 @@
                     <li data-target="#banner" data-slide-to="3">销售明星的故事</li>
                     <li data-target="#banner" data-slide-to="4">郑州第一刷卡哥</li>
                 </ol>
-                
+
             </div>
-            <!-- end banner -->	
+            <!-- end banner -->
+            <?php endif;?>
         </header>
