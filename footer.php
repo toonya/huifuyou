@@ -1,5 +1,5 @@
 
-		<footer>
+		<footer style="background:#e0e3e6;padding:20px 0 15px;">
 			<div class="text-center">
 				<p><a href="">关于我们</a> I <a href="">联系我们</a></p>
 				<p>版权所有 Copyright(C)2012-2020 郑州汇付友科技有限公司</p>
