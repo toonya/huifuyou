@@ -252,6 +252,15 @@ if(!post_type_exists('employee_news'))
 // ! custom page
 // ----------------------------------------
 
-require_once('custom_page/custom-page.php');
+//require_once('custom_page/custom-page.php');
 
+// ----------------------------------------
+// ! browser-check.php
+// ----------------------------------------
+require_once('browser-check.php');
+
+// ----------------------------------------
+// ! 首页图片
+// ----------------------------------------
+require_once('home-banner-images.php');
 
