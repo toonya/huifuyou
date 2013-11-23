@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: 如何申请
+Template Name: 应用下载
 */
 ?>
 
@@ -13,7 +13,17 @@ p { text-align:center; }
 			<?php while ( have_posts() ) : the_post(); ?>
 				
             <!--开始代码-->
-              <img src="<?php echo get_template_directory_uri()?>/images/how-to-apply/how-to-apply.jpg">
+              <!-- Nav tabs -->
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="#android-download" data-toggle="tab">Android客户端</a></li>
+                      <li><a href="#iphone-download" data-toggle="tab">iPhone客户端</a></li>
+                    </ul>
+                    
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="android-download">Android客户端</div>
+                      <div class="tab-pane" id="iphone-download">iPhone客户端</div>
+                    </div>
             <!--结束代码-->
 
 			<?php endwhile; // end of the loop. ?>
