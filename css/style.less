@@ -30,17 +30,13 @@ html,body{
 	background-size: cover;
 }
 
-header{
-	height: 100%;
-}
-	
 // ----------------------------------------
 // ! logo and share and user.
 // ----------------------------------------
 
 .siteinfo{
 	background: #fff;
-	
+
 	.logo{
 		padding: 12px 0 13px 0;
 
@@ -48,27 +44,27 @@ header{
 			height: 71px;
 		}
 	}
-	
+
 	.share, .user{
 		float: left;
 		padding-left: 24px;
 	}
-	
+
 	.share{
 		padding-top: 25px;
 	}
-	
+
 	.user{
 		font-size: 20px;
 		line-height: 72px;
-		
+
 		.login{
-			.transition(1s);				
+			.transition(1s);
 		}
 		.login:hover{
 			text-decoration: none;
 		}
-		
+
 		.register{
 			.transition(1s);
 			margin-left: 12px;
@@ -86,9 +82,9 @@ header{
 .nav-wrapper{
 	border-top: 4px solid #F8AB3E;
 	background: @dark-blue;
-	
+
 	ul{
-		
+
 		li>a{
 			.transition(.5s);
 			padding: 6px 15px;
@@ -97,30 +93,20 @@ header{
 			font-size: 18px;
 			line-height: 32px;
 			font-family: 'Microsoft YaHei';
-			
+
 			&:hover{
 				background: @green;
-			}	
+			}
 		}
 		.current-menu-item>a{
 			background: @deep-blue;
 			color: #fff;
-			
+
 			&:hover{
 				background: @deep-blue;
 				color: #fff;
 			}
 		}
-	}
-}
-
-// ----------------------------------------
-// ! Banner
-// ----------------------------------------
-
-#banner{
-	.item{
-		height: 500px;
 	}
 }
 
@@ -140,12 +126,12 @@ header{
 		display: table-cell;
 		text-align: center;
 		cursor: pointer;
-		
+
 		&.active{
 			width: auto;
 			height: auto;
 		}
-		
+
 		&.hover{
 			background: white;
 		}
@@ -161,12 +147,12 @@ header{
 		position: relative;
 		height: 48px;
 		overflow: hidden;
-		
+
 		.silde-bar-top, .silde-bar-bottom{
 			line-height: 44px;
 			position: relative;
 		}
-		
+
 		.silde-bar-bottom{
 			border-top: @dark-blue 4px solid;
 			background: @light-blue;
@@ -174,15 +160,15 @@ header{
 		.silde-bar-top{
 			top: -44px;
 			background: #fff;
-			.transition(.25s);
+			.transition(.25s cubic-bezier(0,0,.25,1));
 		}
 	}
-	
+
 	.active{
 		.slide-bar-wrap{
 			.silde-bar-top{
 				top: 0;
-			}		
+			}
 		}
 	}
 }
@@ -200,6 +186,13 @@ header{
 }
 
 // ----------------------------------------
+// ! modify animation
+// ----------------------------------------
+.carousel-inner>.item{
+	.transition(.7s cubic-bezier(0,0,.25,1) left);
+}
+
+// ----------------------------------------
 // ! footer
 // ----------------------------------------
 footer{
@@ -213,11 +206,7 @@ footer{
 @media (min-width: @screen-md) { }
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg) {
-	header{
-		height: auto;
-	}
-}
+@media (min-width: @screen-lg) {}
 
 
 

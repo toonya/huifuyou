@@ -47,11 +47,11 @@
             <div id="banner" class="carousel slide">
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
-                    <div data-bg-src="<?php echo get_template_directory_uri();?>/images/assets/banner-1.jpg" class="item auto-add-bg active"></div>
-                    <div data-bg-src="<?php echo get_template_directory_uri();?>/images/assets/banner-1.jpg" class="item auto-add-bg"></div>
-                    <div data-bg-src="<?php echo get_template_directory_uri();?>/images/assets/banner-1.jpg" class="item auto-add-bg"></div>
-                    <div data-bg-src="<?php echo get_template_directory_uri();?>/images/assets/banner-1.jpg" class="item auto-add-bg"></div>
-                    <div data-bg-src="<?php echo get_template_directory_uri();?>/images/assets/banner-1.jpg" class="item auto-add-bg"></div>
+                    <img src="<?php echo get_template_directory_uri();?>/images/assets/banner-1.jpg" class="item img-responsive active" />
+                    <img src="<?php echo get_template_directory_uri();?>/images/assets/banner-1.jpg" class="item img-responsive" />
+                    <img src="<?php echo get_template_directory_uri();?>/images/assets/banner-1.jpg" class="item img-responsive" />
+                    <img src="<?php echo get_template_directory_uri();?>/images/assets/banner-1.jpg" class="item img-responsive" />
+                    <img src="<?php echo get_template_directory_uri();?>/images/assets/banner-1.jpg" class="item img-responsive" />
                 </div>
 
                 <!-- Indicators -->
