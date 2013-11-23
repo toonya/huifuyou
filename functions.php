@@ -36,19 +36,17 @@ add_theme_support( 'custom-background', array(
 }
 add_action( 'after_setup_theme', 'hfy_setup' );
 
-
-
 // ----------------------------------------
-// ! add js for background
+// ! load bootstrap support & css/js files
 // ----------------------------------------
 
-function load_admin_media_support() {
-	wp_enqueue_style( 'admin.css', get_template_directory_uri() . '/css/admin.css' );
-	wp_enqueue_script( 'admin.js', get_template_directory_uri() . '/js/admin.js', array('jquery'), '1.0.0', true );
+function loadBootstrap() {
+	wp_enqueue_style( 'admin-style', get_template_directory_uri() . '/css/admin.css' );
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '1.0.0', true );
+	wp_enqueue_script( 'admin-javascript', get_template_directory_uri() . '/js/admin.js', array('jquery'), '1.0.0', true );
 }
 
-add_action( 'admin_enqueue_scripts', 'load_admin_media_support' );
-
+add_action( 'admin_enqueue_scripts', 'loadBootstrap' );
 // ----------------------------------------
 // ! remove welcome information
 // ----------------------------------------
@@ -252,7 +250,9 @@ if(!post_type_exists('employee_news'))
 // ! custom page
 // ----------------------------------------
 
-//require_once('custom_page/custom-page.php');
+/* require_once('custom_page/custom-page.php'); */
+
+
 
 // ----------------------------------------
 // ! browser-check.php
@@ -262,5 +262,5 @@ require_once('browser-check.php');
 // ----------------------------------------
 // ! 首页图片
 // ----------------------------------------
-require_once('home-banner-images.php');
+require_once('build-page.php');
 
