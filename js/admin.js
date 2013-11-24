@@ -78,8 +78,8 @@ jQuery(function($){
 
 		$newItem.removeClass('active');
 		$newItem.find('.add').addClass('save').removeClass('add').parent().addClass('col-sm-3').removeClass('col-sm-6').after('<div class="col-sm-3"><button type="button" class="btn btn-warning btn-block delete">删除本新闻</button></div>');
-        console.log($newItem);
-        console.log($newItemNav);
+        //console.log($newItem);
+        //console.log($newItemNav);
 
         // insert
         jQuery('#banner-option .nav-tabs li').last().before($newItemNav);
@@ -120,6 +120,43 @@ jQuery(function($){
 		    jQuery(e).attr('id',number);
 	    });
     }
+
+    // ----------------------------------------
+    // ! draggable nav-tabs
+    // ----------------------------------------
+    $( ".nav-tabs" ).sortable({axis:"x",stop: function( event, ui ) {
+	    banner_sort();
+    }});
+
+    // ----------------------------------------
+    // ! resort the list
+    // ----------------------------------------
+    function banner_sort(){
+
+		var $before   = jQuery('#banner-option .nav-tabs li a:not([href="#addnew"])');
+		var args      = [];
+
+		$before.each(function(i,e){   // collect item value that we want to sort on.
+			args[i] = $(e).text()-1;
+		});
+		console.log(args);
+
+		var $new = [];
+		$.each(args,function(i,e) {
+			$new[i] = $('.tab-pane').eq(e).clone().attr('id',e);
+		});
+
+		jQuery('.tab-content .tab-pane:not(:last)').remove();
+
+		$.each($new,function(i,e) {
+			$('.tab-content #addnew').before(e);
+		})
+
+		var $addNew = jQuery('#banner-option .nav-tabs li a[href="#addnew"]').closest('li').detach();
+		jQuery('#banner-option .nav-tabs').append($addNew);
+
+		reNumber();
+	}
 })
 
 
