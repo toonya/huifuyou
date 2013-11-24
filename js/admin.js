@@ -71,13 +71,12 @@ jQuery(function($){
 	// ----------------------------------------
 	jQuery('#banner-option #addnew').on('click.addBannerItem','.add',function(e) {
         e.preventDefault();
-        var number = jQuery('.tab-pane').not('#addnew').size()+1;
 
         $newItem = jQuery(this).closest('#addnew').clone();
-        $newItemNav = jQuery('<li>').append('<a href="#'+number+'" data-toggle="tab">'+number+'</a>');
+        $newItemNav = jQuery('<li>').append('<a href="#" data-toggle="tab"></a>');
         addNewInit();
 
-		$newItem.removeClass('active').attr('id',number);
+		$newItem.removeClass('active');
 		$newItem.find('.add').addClass('save').removeClass('add').parent().addClass('col-sm-3').removeClass('col-sm-6').after('<div class="col-sm-3"><button type="button" class="btn btn-warning btn-block delete">删除本新闻</button></div>');
         console.log($newItem);
         console.log($newItemNav);
@@ -85,7 +84,9 @@ jQuery(function($){
         // insert
         jQuery('#banner-option .nav-tabs li').last().before($newItemNav);
         jQuery('#banner-option #addnew').before($newItem);
-	})
+
+        reNumber();
+	});
 
 	function addNewInit() {
 		jQuery('#banner-option #addnew').find('input').val('').closest('#addnew').find('.preview').html('');
@@ -97,8 +98,14 @@ jQuery(function($){
 	jQuery('#banner-option .tab-content').on('click.deleteBannerItem','.delete',function(e) {
         e.preventDefault();
 
+		var _this = jQuery(this).closest('.tab-pane');
+		var _num  = _this.attr('id')-1;
+		jQuery('#banner-option .nav-tabs li').eq(_num).remove();
+		_this.remove();
 
-    }
+		reNumber();
+		jQuery('[href="#addnew"]').click();
+    });
 
     // ----------------------------------------
     // ! rebuild number
