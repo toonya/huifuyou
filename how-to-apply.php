@@ -9,7 +9,7 @@ Template Name: 如何申请
 p { text-align:center; }
 </style>
 	<div id="primary" class="site-content">
-		<div id="content" role="main" style="padding:0; background:white; text-align:center;">
+		<div id="content" role="main" style="padding:0; background:#f4f4f4; text-align:center;">
 			<?php while ( have_posts() ) : the_post(); ?>
 				
             <!--开始代码-->
