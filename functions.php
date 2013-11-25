@@ -139,10 +139,13 @@ function my_menu_pages() {
 	remove_submenu_page('edit.php','edit-tags.php?taxonomy=category');
 	remove_submenu_page('edit.php','edit-tags.php?taxonomy=post_tag');
 	remove_submenu_page('users.php','user-new.php');
+	remove_submenu_page('upload.php','upload.php');
+	remove_submenu_page('upload.php','media-new.php');
 
 	//add page
 	add_menu_page( '新闻', '新闻', 'manage_options', 'edit.php', '', '', 6 );
 	add_menu_page( '导航', '导航', 'manage_options', 'nav-menus.php', '', '', 21);
+	add_menu_page( '图片库', '图片库', 'manage_options', 'upload.php', '', '', 111);
 }
 
 

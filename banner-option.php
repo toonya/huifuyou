@@ -18,6 +18,7 @@ function homeImagesPageBuilder() {
 
 <div id="banner-option">
     <h1>首页图片管理</h1>
+    <p class="text-info banner-img">注意，如果图片不符合要求的话，请制作大图片，宽度在1400以上。保证各个图片长宽一致，首页显示才会漂亮。<br /> 提示：如果长宽不同导致图片显示大小不一样时候，可以在图片库中进行裁剪。 </p>
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs">
