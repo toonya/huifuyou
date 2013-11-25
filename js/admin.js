@@ -1,5 +1,4 @@
 jQuery(function($){
-
     // ----------------------------------------
     // ! modify options on user page
     // ----------------------------------------
@@ -21,7 +20,7 @@ jQuery(function($){
         e.preventDefault();
 
         // Get our Parent element
-        banner_reciever = jQuery(this).closest('.control').siblings('.info').find('.url');
+        banner_reciever = jQuery(this).closest('.control').siblings('.info').find('.imgurl');
 
         // preview
         banner_preview = jQuery(this).closest('.control').find('.preview');
@@ -54,6 +53,7 @@ jQuery(function($){
             var imgurl = media_attachment[0].url;
 
             banner_reciever.val(imgurl);
+            console.log(banner_reciever);
 
             var $preview = jQuery('<img>').attr('src',imgurl).addClass('img-responsive');
 
@@ -88,9 +88,21 @@ jQuery(function($){
         reNumber();
 	});
 
+	// ----------------------------------------
+	// ! init the addnew area
+	// ----------------------------------------
 	function addNewInit() {
 		jQuery('#banner-option #addnew').find('input').val('').closest('#addnew').find('.preview').html('');
 	}
+
+	// ----------------------------------------
+	// ! save modify
+	// ----------------------------------------
+	jQuery('#banner-option').on('click.saveBannerList','.save',function(e) {
+		e.preventDefault();
+
+		save_banner_option();
+	})
 
 	// ----------------------------------------
 	// ! delete banner item
@@ -119,6 +131,8 @@ jQuery(function($){
 	    	var number = i+1;
 		    jQuery(e).attr('id',number);
 	    });
+
+	    save_banner_option();
     }
 
     // ----------------------------------------
@@ -156,6 +170,27 @@ jQuery(function($){
 		jQuery('#banner-option .nav-tabs').append($addNew);
 
 		reNumber();
+	}
+
+	// ----------------------------------------
+	// ! save banner option
+	// ----------------------------------------
+	function save_banner_option() {
+		var banner_data = banner_option;
+		banner_data.bannerlist = [];
+
+		//get every banner info.
+		jQuery('.tab-pane:not(:last)').each(function(i,e) {
+			var banner_item = {} ;
+
+			banner_item.title = jQuery(e).find('input.title').val();
+			banner_item.imgurl   = jQuery(e).find('input.imgurl').val();
+
+			banner_data.bannerlist[i] = banner_item;
+		});
+
+		//post to server.
+		jQuery.post(banner_data.url, banner_data, function(response) {console.log(response);}).done(function(){console.log('done')}).fail(function(){console.log('failed')});
 	}
 })
 
