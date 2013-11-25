@@ -265,5 +265,5 @@ require_once('browser-check.php');
 // ----------------------------------------
 // ! 首页图片
 // ----------------------------------------
-require_once('build-page.php');
+require_once('banner-option.php');
 

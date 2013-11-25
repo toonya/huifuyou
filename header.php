@@ -44,26 +44,36 @@
             <nav class="nav-wrapper"><div class="container"><?php wp_nav_menu( array( 'theme_location' => 'header-menu','container'=>'false','menu_class'=>'nav nav-justified' ) );?></div></nav>
             <!-- end nav -->
             <?php if(is_home()):;?>
+            <?php
+                $banner_list = get_option('bannerlist');
+                $banner_control = '';
+				if($banner_list):;
+            ?>
             <div id="banner" class="carousel slide">
+
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
-                    <img src="<?php echo get_template_directory_uri();?>/images/assets/banner-1.jpg" class="item img-responsive active" />
-                    <img src="<?php echo get_template_directory_uri();?>/images/assets/banner-1.jpg" class="item img-responsive" />
-                    <img src="<?php echo get_template_directory_uri();?>/images/assets/banner-1.jpg" class="item img-responsive" />
-                    <img src="<?php echo get_template_directory_uri();?>/images/assets/banner-1.jpg" class="item img-responsive" />
-                    <img src="<?php echo get_template_directory_uri();?>/images/assets/banner-1.jpg" class="item img-responsive" />
+                	<?php
+	                	foreach($banner_list as $key=>$item) {
+		                	if($key==0) {
+		                		echo '<img src="'.$item['imgurl'].'" class="item img-responsive active" />';
+								$banner_control .= '<li data-target="#banner" data-slide-to="0" class="active">'.$item['title'].'</li>';
+		                	}
+		                	else {
+		                		echo '<img src="'.$item['imgurl'].'" class="item img-responsive" />';
+								$banner_control .= '<li data-target="#banner" data-slide-to="'.$key.'">'.$item['title'].'</li>';
+		                	}
+	                	}
+                	?>
                 </div>
 
                 <!-- Indicators -->
                 <ol class="carousel-nav">
-                    <li data-target="#banner" data-slide-to="0" class="active">小生意POS机</li>
-                    <li data-target="#banner" data-slide-to="1">新潮老板最爱</li>
-                    <li data-target="#banner" data-slide-to="2">聪明你的生意</li>
-                    <li data-target="#banner" data-slide-to="3">销售明星的故事</li>
-                    <li data-target="#banner" data-slide-to="4">郑州第一刷卡哥</li>
+                    <?php echo $banner_control; ?>
                 </ol>
 
             </div>
             <!-- end banner -->
+            <?php endif;?>
             <?php endif;?>
         </header>
