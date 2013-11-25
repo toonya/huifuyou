@@ -7,10 +7,6 @@ $register_error = '';
 $login_error    = '';
 $update_error  = '';
 $user;
-if( current_user_can('level_10') )
-	show_admin_bar(true);
-else
-	show_admin_bar(false);
 
 // ! user logined, make $user usable.
 if(is_user_logged_in())
@@ -30,7 +26,7 @@ get_header(); ?>
 
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
-			<div class="container">
+			<div class="container employee">
 			<?php  if ( !is_user_logged_in() ) :;?>
 				<div class="login col-md-offset-3 col-md-6">
 					<h3 class="text-center">员工登录</h3>
