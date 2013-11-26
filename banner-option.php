@@ -88,7 +88,9 @@ function homeImagesPageBuilder() {
                     <div class="col-sm-6">
                         <button type="button" class="btn btn-primary btn-block add">保存新闻</button>
                     </div>
-                    <div class="preview col-sm-9"></div>
+                    <div class="preview col-sm-9">
+	                    <img src="" class="img-responsive" alt="">
+                    </div>
                 </div>
             </div>
         </div>
