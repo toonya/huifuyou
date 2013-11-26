@@ -49,7 +49,7 @@ function homeImagesPageBuilder() {
                 <!-- input area for store data -->
                 <div class="info">
                     <input type="text" value="<?php echo $title; ?>" class="form-control title" placeholder="输入标题" />
-                    <input type="hidden" value="<?php echo $img; ?>" class="form-control imgurl" />
+                    <input type="text" value="<?php echo $img; ?>" class="form-control imgurl" />
                 </div>
                 <!-- control area -->
                 <div class="row control">

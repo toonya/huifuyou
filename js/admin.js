@@ -193,6 +193,24 @@ jQuery(function($){
 		//post to server.
 		jQuery.post(banner_data.url, banner_data, function(response) {console.log(response);}).done(function(){console.log('done')}).fail(function(){console.log('failed')});
 	}
+
+	// ----------------------------------------
+	// ! banner imgurl input focusout
+	// ----------------------------------------
+	jQuery('#banner-option').on('focusout.changeImgUrl','input.imgurl',function(){
+		var num = jQuery(this).closest('.tab-pane').index('.tab-pane');
+		freshPreview(num);
+		console.log(num);
+	})
+
+	// ----------------------------------------
+	// ! change preview img
+	// ----------------------------------------
+	function freshPreview(num) {
+		var $target = jQuery('#banner-option .tab-pane').eq(num);
+		var imgUrl = $target.find('input.imgurl').val();
+		$target.find('.preview').children('img').attr('src',imgUrl);
+	}
 })
 
 
