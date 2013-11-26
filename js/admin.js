@@ -197,19 +197,46 @@ jQuery(function($){
 	// ----------------------------------------
 	// ! banner imgurl input focusout
 	// ----------------------------------------
-	jQuery('#banner-option').on('focusout.changeImgUrl','input.imgurl',function(){
-		var num = jQuery(this).closest('.tab-pane').index('.tab-pane');
-		freshPreview(num);
-		console.log(num);
-	})
+	jQuery('#banner-option').on('focusout.changeImgUrl','input.imgurl', freshPreview);
 
 	// ----------------------------------------
 	// ! change preview img
 	// ----------------------------------------
-	function freshPreview(num) {
+	function freshPreview() {
+		var num = jQuery(this).closest('.tab-pane').index('.tab-pane');
 		var $target = jQuery('#banner-option .tab-pane').eq(num);
 		var imgUrl = $target.find('input.imgurl').val();
 		$target.find('.preview').children('img').attr('src',imgUrl);
+		if(!imgUrl)
+			$target.find('.preview').children('img').attr('src','#');
+	}
+
+	// ----------------------------------------
+	// ! keydown event
+	// ----------------------------------------
+	jQuery('#banner-option').on('keydown.inputDone', 'input.imgurl' ,inputDone);
+
+	var backspace_counter = 0;
+
+	function inputDone(e){
+		charCode = e.charCode || e.keyCode;
+
+		if(charCode == 8){
+			backspace_counter = backspace_counter+1;
+
+			if(backspace_counter >= 3 || jQuery(this).val().length==1){
+				jQuery(this).val('').focusout();
+			}
+		}
+
+		if(charCode != 108 && charCode !=8 && charCode !=27){
+			backspace_counter = 0;
+		}
+
+		if(charCode  == 13){
+			backspace_counter = 0;
+			jQuery(this).focusout();
+		}
 	}
 })
 
