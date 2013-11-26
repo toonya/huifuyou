@@ -78,7 +78,7 @@ function homeImagesPageBuilder() {
                 <!-- input area for store data -->
                 <div class="info">
                     <input type="text" class="form-control title" placeholder="输入标题" />
-                    <input type="hidden" class="form-control imgurl" />
+                    <input type="text" class="form-control imgurl" />
                 </div>
                 <!-- control area -->
                 <div class="row control">
