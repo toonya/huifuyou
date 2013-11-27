@@ -17,7 +17,6 @@
     <body>
     	<!-- class="auto-add-bg bg-cover" data-bg-src="<?php echo get_template_directory_uri();?>/images/bgheader.jpg" -->
         <header>
-        <h1>test</h1>
             <div class="siteinfo">
             	<div class="container">
             	    <div class="pull-right">
