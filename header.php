@@ -15,7 +15,7 @@
         <?php wp_head(); ?>
     </head>
     <body>
-    	<h1>test</h1>
+    	<!-- class="auto-add-bg bg-cover" data-bg-src="<?php echo get_template_directory_uri();?>/images/bgheader.jpg" -->
         <header>
             <div class="siteinfo">
             	<div class="container">
