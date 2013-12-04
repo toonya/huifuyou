@@ -113,6 +113,7 @@ function my_menu_pages() {
 	//remove page
 	$cc_remove_page = array(
 		'edit.php',
+		'edit.php?post_type=page',
 		'tools.php',
 		'index.php',
 		'upload.php',
@@ -142,10 +143,11 @@ function my_menu_pages() {
 	remove_submenu_page('upload.php','upload.php');
 	remove_submenu_page('upload.php','media-new.php');
 
-	//add page
-	add_menu_page( '新闻', '新闻', 'manage_options', 'edit.php', '', '', 6 );
-	add_menu_page( '导航', '导航', 'manage_options', 'nav-menus.php', '', '', 21);
-	add_menu_page( '图片库', '图片库', 'manage_options', 'upload.php', '', '', 111);
+	//add pageevernote:///view/283963/s10/80680381-86d9-4e14-808c-fa782a0160a0/80680381-86d9-4e14-808c-fa782a0160a0/
+	add_menu_page( '新闻', '新闻', 'manage_options', 'edit.php', '', '', 1 );
+	add_menu_page( '页面', '页面', 'manage_options', 'edit.php?post_type=page', '', '', 2 );
+	add_menu_page( '导航', '导航', 'manage_options', 'nav-menus.php', '', '', 3);
+	add_menu_page( '图片库', '图片库', 'manage_options', 'upload.php', '', '', 10);
 }
 
 
@@ -251,7 +253,7 @@ function employee_news() {
     'capability_type' => 'post',
     'has_archive' => true,
     'hierarchical' => false,
-    'menu_position' => null,
+    'menu_position' => 70,
     'supports' => array( 'title', 'editor','thumbnail', 'excerpt' )
   );
 

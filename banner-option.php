@@ -7,7 +7,7 @@
 add_action( 'admin_menu', 'home_images' );
 
 function home_images() {
-    add_menu_page( '首页图片', '首页图片', 'manage_options', 'homeImageOptions', 'homeImagesPageBuilder', '', 99 );
+    add_menu_page( '首页图片', '首页图片', 'manage_options', 'homeImageOptions', 'homeImagesPageBuilder', '', 11 );
 }
 function homeImagesPageBuilder() {
     $banner_list = get_option('bannerlist');
