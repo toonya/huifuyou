@@ -93,7 +93,7 @@ jQuery(function($){
 	// ! init the addnew area
 	// ----------------------------------------
 	function addNewInit() {
-		jQuery('#banner-option #addnew').find('input').val('').closest('#addnew').find('.preview').html('');
+		jQuery('#banner-option #addnew').find('input').val('').closest('#addnew').find('.preview').html('').closest('#addnew').find('url').val('');
 	}
 
 	// ----------------------------------------
@@ -185,6 +185,7 @@ jQuery(function($){
 			var banner_item = {} ;
 
 			banner_item.title = jQuery(e).find('input.title').val();
+			banner_item.url   = jQuery(e).find('input.url').val();
 			banner_item.imgurl   = jQuery(e).find('input.imgurl').val();
 
 			banner_data.bannerlist[i] = banner_item;

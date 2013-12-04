@@ -56,11 +56,11 @@
                 	<?php
 	                	foreach($banner_list as $key=>$item) {
 		                	if($key==0) {
-		                		echo '<img src="'.$item['imgurl'].'" class="item img-responsive active" />';
+		                		echo '<a class="item active" href="'.$item['url'].'"><img src="'.$item['imgurl'].'" class="img-responsive" /></a>';
 								$banner_control .= '<li data-target="#banner" data-slide-to="0" class="active">'.$item['title'].'</li>';
 		                	}
 		                	else {
-		                		echo '<img src="'.$item['imgurl'].'" class="item img-responsive" />';
+		                		echo '<a class="item" href="'.$item['url'].'"><img src="'.$item['imgurl'].'" class="img-responsive" /></a>';
 								$banner_control .= '<li data-target="#banner" data-slide-to="'.$key.'">'.$item['title'].'</li>';
 		                	}
 	                	}
