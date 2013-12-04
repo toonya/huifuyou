@@ -6,7 +6,7 @@
     </div>
     <style type="text/css">
 			.flink { margin-top:100px; }
-			.flink ul { width:900px; margin:0 auto; height:150px; list-style:none; }
+			.flink ul { width:900px; margin:0 auto; height:115px; list-style:none; }
 			.flink ul li { float:left; margin-right:15px; }
 			.m-bottom-30 { margin-bottom:30px; }
 		</style>
