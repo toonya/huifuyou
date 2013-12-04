@@ -18,7 +18,7 @@ function homeImagesPageBuilder() {
 
 <div id="banner-option">
     <h1>首页图片管理</h1>
-    <p class="text-info banner-img">注意，首页幻灯片图片长宽必须为1680px*432px。</p>
+    <p class="text-info banner-img">注意，首页幻灯片图片长宽必须为1680px*550px。</p>
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs">
