@@ -11,7 +11,7 @@ Template Name: 增值服务
 			<?php while ( have_posts() ) : the_post(); ?>
 				
             <!--开始代码-->
-                <img class="img-responsitive center-block" 
+                <img class="img-responsive center-block" 
                      src="<?php echo get_template_directory_uri()?>/images/appreciation/appreciation.png">
             <!--结束代码-->
 

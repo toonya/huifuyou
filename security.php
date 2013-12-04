@@ -14,9 +14,9 @@ Template Name: 安全保障
 			<?php while ( have_posts() ) : the_post(); ?>
 				
             <!--开始代码-->
-                <p id="feature-1">通过银联相关认证<img class="img-responsitive" style="vertical-align:top;margin-left:300px;" src="<?php echo get_template_directory_uri()?>/images/security/unionpay.png"></p>
-                <p id="feature-2">软硬件双重加密<img class="img-responsitive" style="vertical-align:top;margin-left:400px;" src="<?php echo get_template_directory_uri()?>/images/security/2.png"></p>
-                <p id="feature-3" style="border-bottom:none;margin-bottom:0">后台数据严密审核<img style="vertical-align:top;margin-left:365px;" src="<?php echo get_template_directory_uri()?>/images/security/1.png"></p>
+                <p id="feature-1">通过银联相关认证<img class="img-responsive" style="vertical-align:top;margin-left:300px;" src="<?php echo get_template_directory_uri()?>/images/security/unionpay.png"></p>
+                <p id="feature-2">软硬件双重加密<img class="img-responsive" style="vertical-align:top;margin-left:400px;" src="<?php echo get_template_directory_uri()?>/images/security/2.png"></p>
+                <p id="feature-3" style="border-bottom:none;margin-bottom:0">后台数据严密审核<img class="img-responsive" style="vertical-align:top;margin-left:365px;" src="<?php echo get_template_directory_uri()?>/images/security/1.png"></p>
             <!--结束代码-->
 
 			<?php endwhile; // end of the loop. ?>
