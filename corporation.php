@@ -4,7 +4,8 @@ Template Name: 渠道合作
 */
 ?>
 
-<?php get_header(); ?>
+<?php get_header();?>
+
 <style type="text/css">
 h2, .cor-p { width:1000px;
      margin:0 auto;

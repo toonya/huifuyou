@@ -35,7 +35,7 @@
             	        <div class="clearfix"></div>
             	    </div>
             	    <div class="logo">
-            	        <a href="<?php echo bloginfo('url')?>"><img src="<?php echo get_template_directory_uri()?>/images/assets/logo.png" alt="" class="img-responsive" /></a>
+            	        <a href="<?php echo bloginfo('url')?>"><img style="height:58px" src="<?php echo get_template_directory_uri()?>/images/assets/logo.png" alt="" class="img-responsive" /></a>
             	    </div>
             	</div>
             	<!-- end container -->
