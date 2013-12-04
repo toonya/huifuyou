@@ -44,7 +44,11 @@
             	<!-- end container -->
             </div>
             <!-- end siteinfo -->
+            <?php if(!isIE()):; ?>
             <nav class="nav-wrapper"><div class="container"><?php wp_nav_menu( array( 'theme_location' => 'header-menu','container'=>'false','menu_class'=>'nav nav-justified' ) );?></div></nav>
+            <?php else: ?>
+            <nav class="nav-wrapper"><div class="container"><?php wp_nav_menu( array( 'theme_location' => 'header-menu','container'=>'false','menu_class'=>'nav nav-float' ) );?></div></nav>
+            <?php endif; ?>
             <!-- end nav -->
             <?php if(is_home()):;?>
             <?php

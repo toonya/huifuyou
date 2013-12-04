@@ -1,12 +1,6 @@
 <?php
 
-$cur_browser = new Browser();
-$browser_name = $cur_browser->getBrowser();
-$browser_version = $cur_browser->getVersion();
-
-if($browser_name=='Internet Explorer' && $browser_version<9)
-	browser_alert();
-if($browser_name=='Mozilla' && $browser_version<6)
+if(isIE())
 	browser_alert();
 
 
@@ -20,6 +14,22 @@ function browser_alert() {
 			</ul>
 			');
 }
+
+
+// ----------------------------------------
+// ! browser check
+// ----------------------------------------
+function isIE(){
+	$cur_browser = new Browser();
+	$browser_name = $cur_browser->getBrowser();
+	$browser_version = $cur_browser->getVersion();
+
+	if($browser_name=='Internet Explorer' && $browser_version<9)
+		return true;
+	if($browser_name=='Mozilla' && $browser_version<6)
+		return true;
+}
+
 
 class Browser {
     private $_agent = '';
