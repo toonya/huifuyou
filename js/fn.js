@@ -35,7 +35,7 @@ jQuery(function($) {
      // ----------------------------------------
      // ! banner nav animation effect
      // ----------------------------------------
-	 if(!jQuery('#banner').data('nav-animation')){
+	 if(jQuery('#banner').data('nav-animation')){
 	     $('.carousel-nav li').each(function(i,e) {
 	     	var origin_content = jQuery(e).text();
 	     	var new_content = jQuery('<div>');
