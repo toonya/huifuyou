@@ -4,7 +4,7 @@ $cur_browser = new Browser();
 $browser_name = $cur_browser->getBrowser();
 $browser_version = $cur_browser->getVersion();
 
-if($browser_name=='Internet Explorer' && $browser_version<8)
+if($browser_name=='Internet Explorer' && $browser_version<9)
 	browser_alert();
 if($browser_name=='Mozilla' && $browser_version<6)
 	browser_alert();
