@@ -7,11 +7,11 @@
     <style type="text/css">
 			.flink { margin-top:100px; }
 			.flink ul { width:900px; margin:0 auto; height:115px; list-style:none; }
-			.flink ul li { float:left; margin-right:15px; }
+			.flink ul li { float:left; margin-right:35px; }
 			.m-bottom-30 { margin-bottom:30px; }
 		</style>
     <div class="flink">
-    	<p style="width:900px; margin:0 auto; font-family:Microsoft YaHei,微软雅黑;">友情链接：</p>
+    	<p style="width:900px; margin:0 auto; font-family:Microsoft YaHei,微软雅黑; margin-bottom:10px;">友情链接：</p>
         <ul>
         	<li class="m-bottom-30"><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-1.jpg"></a></li>
             <li class="m-bottom-30"><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-2.jpg"></a></li>
