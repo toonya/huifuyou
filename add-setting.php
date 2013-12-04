@@ -4,7 +4,7 @@
 add_action( 'admin_menu', 'add_setting' );
 
 function add_setting() {
-    add_menu_page( '设置', '设置', 'manage_options', 'add-setting', 'add_setting_page', '', 100 );
+    add_menu_page( '设置', '设置', 'manage_options', 'add-setting', 'add_setting_page', '', 110 );
 }
 function add_setting_page() {
     //setting option
