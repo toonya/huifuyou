@@ -30,7 +30,7 @@ Template Name: 新闻栏目
 					$the_query = new WP_Query( $args );
 
 					// The Loop
-					echo '<ul class="list-group">';
+					echo '<ul class="list-group center-block" style="width:70%;">';
 					while ( $the_query->have_posts() ) :
 						$the_query->the_post();
 						echo '<li>';
