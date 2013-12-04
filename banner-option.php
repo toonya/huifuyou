@@ -41,6 +41,7 @@ function homeImagesPageBuilder() {
         foreach($banner_list as $key=>$item) {
             $num = $key+1;
             $img = $item['imgurl'];
+            $url = $item['url'];
             $title = $item['title'];
             ?>
 
@@ -49,6 +50,7 @@ function homeImagesPageBuilder() {
                 <!-- input area for store data -->
                 <div class="info">
                     <input type="text" value="<?php echo $title; ?>" class="form-control title" placeholder="输入标题" />
+                    <input type="text" value="<?php echo $url; ?>" class="form-control url" placeholder="输入超链接" />
                     <input type="text" value="<?php echo $img; ?>" class="form-control imgurl" placeholder="输入图片地址，或点击下面的按钮从图片库中选择" />
                 </div>
                 <!-- control area -->
@@ -78,6 +80,7 @@ function homeImagesPageBuilder() {
                 <!-- input area for store data -->
                 <div class="info">
                     <input type="text" class="form-control title" placeholder="输入标题" />
+                    <input type="text" class="form-control url" placeholder="输入超链接" />
                     <input type="text" class="form-control imgurl"  placeholder="输入图片地址，或点击下面的按钮从图片库中选择" />
                 </div>
                 <!-- control area -->
