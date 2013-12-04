@@ -24,7 +24,7 @@ p { text-align:center; }
             <div class="wrap">
                 <div class="case">
                     <h3>餐饮商户</h3>
-                    <img src="<?php echo get_template_directory_uri()?>/images/cases/case-1.jpg">
+                    <img class="img-responsitive" src="<?php echo get_template_directory_uri()?>/images/cases/case-1.jpg">
 				    <ul>
                         <li style="font-weight:bold">【商户面临的问题】</li>
                         <li>客户需要送餐上门，担心收假钞；</li>
@@ -50,11 +50,11 @@ p { text-align:center; }
                         <li>机具价格便宜， 使用方便，业务人员配合手机或平板即可收款；</li>
                         <li>审批灵活，轻松解决收款问题。</li>
                     </ul>
-                    <img src="<?php echo get_template_directory_uri()?>/images/cases/case-2.jpg">				    
+                    <img class="img-responsitive" src="<?php echo get_template_directory_uri()?>/images/cases/case-2.jpg">				    
                 </div>   
                 <div class="case">
                     <h3>通讯、数码电子</h3>
-                    <img src="<?php echo get_template_directory_uri()?>/images/cases/case-3.jpg">
+                    <img class="img-responsitive" src="<?php echo get_template_directory_uri()?>/images/cases/case-3.jpg">
 				    <ul>
                         <li style="font-weight:bold">【商户面临的问题】</li>
                         <li>通讯店产品单价高，客户出行现金不足，希望刷卡支付；</li>
@@ -78,11 +78,11 @@ p { text-align:center; }
                         <li>申请审批灵活、价格低；</li>
                         <li>增值服务生活好帮手。</li>
                     </ul>
-                    <img src="<?php echo get_template_directory_uri()?>/images/cases/case-4.jpg">				    
+                    <img class="img-responsitive" src="<?php echo get_template_directory_uri()?>/images/cases/case-4.jpg">				    
                 </div> 
                 <div class="case">
                     <h3>杂货店、便利店</h3>
-                    <img src="<?php echo get_template_directory_uri()?>/images/cases/case-5.jpg">
+                    <img class="img-responsitive" src="<?php echo get_template_directory_uri()?>/images/cases/case-5.jpg">
 				    <ul>
                         <li style="font-weight:bold">【商户面临的问题】</li>
                         <li>经常有客户需要刷卡；</li>
@@ -108,11 +108,11 @@ p { text-align:center; }
                         <li>申请门槛低，审批速度快，价格便宜；</li>
                         <li>增值业务信用卡还款功能带来人气引导二次消费。</li>
                     </ul>
-                    <img src="<?php echo get_template_directory_uri()?>/images/cases/case-6.jpg">
+                    <img class="img-responsitive" src="<?php echo get_template_directory_uri()?>/images/cases/case-6.jpg">
                 </div>
                 <div class="case">
                     <h3>美容店</h3>
-                    <img src="<?php echo get_template_directory_uri()?>/images/cases/case-7.jpg">
+                    <img class="img-responsitive" src="<?php echo get_template_directory_uri()?>/images/cases/case-7.jpg">
 				    <ul>
                         <li style="font-weight:bold">【商户面临的问题】</li>
                         <li>时尚客户群，首选刷卡支付；</li>
@@ -136,11 +136,11 @@ p { text-align:center; }
                         <li>乐刷审批灵活、机具价格低；</li>
                         <li>增值业务丰富，还款、充值也不耽误看店。</li>
                     </ul>
-                    <img src="<?php echo get_template_directory_uri()?>/images/cases/case-8.jpg">				    
+                    <img class="img-responsitive" src="<?php echo get_template_directory_uri()?>/images/cases/case-8.jpg">				    
                 </div>
                 <div class="case">
                     <h3>五金</h3>
-                    <img src="<?php echo get_template_directory_uri()?>/images/cases/case-9.jpg">
+                    <img class="img-responsitive" src="<?php echo get_template_directory_uri()?>/images/cases/case-9.jpg">
 				    <ul>
                         <li style="font-weight:bold">【商户面临的问题】</li>
                         <li>部分大额订单，无法现金支付；</li>
@@ -164,11 +164,11 @@ p { text-align:center; }
                         <li>移动收款便捷；不错过任何一笔交易；</li>
                         <li>机具成本更适合普及使用。</li>
                     </ul>
-                    <img src="<?php echo get_template_directory_uri()?>/images/cases/case-10.jpg">				    
+                    <img class="img-responsitive" src="<?php echo get_template_directory_uri()?>/images/cases/case-10.jpg">				    
                 </div>
                 <div class="case">
                     <h3>家具建材</h3>
-                    <img src="<?php echo get_template_directory_uri()?>/images/cases/case-11.jpg">
+                    <img class="img-responsitive" src="<?php echo get_template_directory_uri()?>/images/cases/case-11.jpg">
 				    <ul>
                         <li style="font-weight:bold">【商户面临的问题】</li>
                         <li>大部分为大额订单，在店铺付定金，货到付款，需刷卡收款；</li>
@@ -192,11 +192,11 @@ p { text-align:center; }
                         <li>审批灵活、周期短，使用成本低；</li>
                         <li>增值服务功能满足日常需求。</li>
                     </ul>
-                    <img src="<?php echo get_template_directory_uri()?>/images/cases/case-12.jpg">
+                    <img class="img-responsitive" src="<?php echo get_template_directory_uri()?>/images/cases/case-12.jpg">
                 </div>
                 <div class="case">
                     <h3>快递</h3>
-                    <img src="<?php echo get_template_directory_uri()?>/images/cases/case-13.jpg">
+                    <img class="img-responsitive" src="<?php echo get_template_directory_uri()?>/images/cases/case-13.jpg">
 				    <ul>
                         <li style="font-weight:bold">【商户面临的问题】</li>
                         <li>部分快递需要货到付款；</li>
@@ -220,11 +220,11 @@ p { text-align:center; }
                         <li>审核灵活、移动收款好帮手；</li>
                         <li>机具获取和使用成本低。</li>
                     </ul>
-                    <img src="<?php echo get_template_directory_uri()?>/images/cases/case-14.jpg">				    
+                    <img class="img-responsitive" src="<?php echo get_template_directory_uri()?>/images/cases/case-14.jpg">				    
                 </div>
                 <div class="case">
                     <h3>药店</h3>
-                    <img src="<?php echo get_template_directory_uri()?>/images/cases/case-15.jpg">
+                    <img class="img-responsitive" src="<?php echo get_template_directory_uri()?>/images/cases/case-15.jpg">
 				    <ul>
                         <li style="font-weight:bold">【商户面临的问题】</li>
                         <li>客户多有刷卡习惯；</li>

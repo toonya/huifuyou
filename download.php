@@ -32,14 +32,14 @@ h3 { text-align:left;
                          <div style="background:lightgrey;padding:20px;margin-bottom:40px;">
                               <h3 style="margin-top:0;">你可以在电脑上下载</h3>
                               <a href="" target="_blank">
-                                  <img src="<?php echo get_template_directory_uri()?>/images/download/btn_d_ly.png">
+                                  <img class="img-responsitive" src="<?php echo get_template_directory_uri()?>/images/download/btn_d_ly.png">
                               </a>
                               <p class="font-12">适用于Android系统的手机和部分平板电脑</p>
                               <a class="font-12" href="" target="_blank">Andriod V1.3.0版本下载</a>
                          </div>
                          <div style="background:lightgrey;padding:20px;">
                               <h3 style="margin-top:0;">还可以扫一扫直接手机下载</h3>
-                              <img src="<?php echo get_template_directory_uri()?>/images/download/down_android_28.gif">
+                              <img class="img-responsitive" src="<?php echo get_template_directory_uri()?>/images/download/down_android_28.gif">
                               <p class="font-12" style="margin-top:5px;">适用于Android系统的手机和部分平板电脑</p> 
                          </div>                        
                       </div>

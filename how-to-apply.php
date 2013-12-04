@@ -13,7 +13,7 @@ p { text-align:center; }
 			<?php while ( have_posts() ) : the_post(); ?>
 				
             <!--开始代码-->
-              <img src="<?php echo get_template_directory_uri()?>/images/how-to-apply/how-to-apply.jpg">
+              <img class="img-responsitive center-block" src="<?php echo get_template_directory_uri()?>/images/how-to-apply/how-to-apply.jpg">
             <!--结束代码-->
 
 			<?php endwhile; // end of the loop. ?>
