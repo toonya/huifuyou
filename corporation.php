@@ -40,7 +40,7 @@ h2 {
                 <h2>申请流程</h2>
                 <img style="margin-bottom:70px" src="<?php echo get_template_directory_uri()?>/images/corporation/5.png">
             <!--结束代码-->
-				<?php the_content(); ?>
+				<div class="container"><div class="col-sm-6 col-offset-sm2"><?php the_content(); ?></div></div>
 			<?php endwhile; // end of the loop. ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
