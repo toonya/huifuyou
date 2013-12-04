@@ -6,8 +6,12 @@
     </div>
     <div class="flink">
     	<p>友情链接：</p>
-        <ul style="list-style:none;">
-        	<li><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-1.jpg"></a></li>
+        <style type="text/css">
+			.flink ul { width:900px; margin:0 auto; height:150px; list-style:none; }
+			.flink ul li { float:left; margin-right:15px; }
+		</style>
+        <ul>
+        	<li style="float:left"><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-1.jpg"></a></li>
             <li><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-2.jpg"></a></li>
             <li><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-3.jpg"></a></li>
             <li><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-4.jpg"></a></li>
