@@ -24,11 +24,11 @@
             	            <?php require_once("sharejiathis.php"); ?>
             	        </div>
             	        <div class="user">
-            	            <a href="<?php echo esc_attr('headerLoginUrl') ?>" class="login">
+            	            <a href="<?php echo esc_attr(get_option('headerLoginUrl')) ?>" class="login">
             	                <span class="glyphicon glyphicon-user"></span>
             	                登录
             	            </a>
-            	            <a href="<?php echo esc_attr('headerRegistUrl') ?>" class="register btn btn-warning btn-lg">
+            	            <a href="<?php echo esc_attr(get_option('headerRegistUrl')) ?>" class="register btn btn-warning btn-lg">
             	                立即注册
             	            </a>
             	        </div>
