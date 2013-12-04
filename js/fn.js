@@ -72,5 +72,12 @@ jQuery(function($) {
 		 },function(){
 			 jQuery(this).popover('hide');
 		 });
+	 });
+
+	 // ----------------------------------------
+	 // ! preventDefault
+	 // ----------------------------------------
+	 jQuery('a[href=""]').click(function(e) {
+		 e.preventDefault();
 	 })
 })

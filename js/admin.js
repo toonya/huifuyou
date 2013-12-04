@@ -54,7 +54,7 @@ jQuery(function($){
             var imgurl = media_attachment[0].url;
 
             banner_reciever.val(imgurl);
-            console.log(banner_reciever);
+            //console.log(banner_reciever);
 
             var $preview = jQuery('<img>').attr('src',imgurl).addClass('img-responsive');
 
@@ -72,6 +72,9 @@ jQuery(function($){
 	// ----------------------------------------
 	jQuery('#banner-option #addnew').on('click.addBannerItem','.add',function(e) {
         e.preventDefault();
+        var _validation = validation(jQuery(this));
+        if(!_validation)
+        	return false;
 
         $newItem = jQuery(this).closest('#addnew').clone();
         $newItemNav = jQuery('<li>').append('<a href="#" data-toggle="tab"></a>');
@@ -101,6 +104,9 @@ jQuery(function($){
 	// ----------------------------------------
 	jQuery('#banner-option').on('click.saveBannerList','.save',function(e) {
 		e.preventDefault();
+		var _validation = validation(jQuery(this));
+        if(!_validation)
+        	return false;
 
 		save_banner_option();
 	})
@@ -154,7 +160,7 @@ jQuery(function($){
 		$before.each(function(i,e){   // collect item value that we want to sort on.
 			args[i] = $(e).text()-1;
 		});
-		console.log(args);
+		//console.log(args);
 
 		var $new = [];
 		$.each(args,function(i,e) {
@@ -192,7 +198,7 @@ jQuery(function($){
 		});
 
 		//post to server.
-		jQuery.post(banner_data.url, banner_data, function(response) {console.log(response);}).done(function(){console.log('done')}).fail(function(){console.log('failed')});
+		jQuery.post(banner_data.url, banner_data, function(response) {}).done(function(){console.log('done')}).fail(function(){console.log('failed')});
 	}
 
 	// ----------------------------------------
@@ -239,6 +245,29 @@ jQuery(function($){
 			jQuery(this).focusout();
 		}
 	}
+
+	// ----------------------------------------
+	// ! input validate
+	// ----------------------------------------
+	function validation(_this) {
+		var _validation = true;
+
+		_this.closest('.tab-pane').find('.need').each(function(i,e){
+			if(!jQuery(e).val()) {
+			console.log(i);
+				_validation = false;
+				jQuery(e).addClass('inputError');
+			}
+		});
+		return _validation;
+	}
+
+	// ----------------------------------------
+	// ! inputError focus
+	// ----------------------------------------
+	jQuery('#banner-option').on('focusin.removeError','.inputError',function(){
+		jQuery(this).removeClass('inputError');
+	})
 })
 
 
