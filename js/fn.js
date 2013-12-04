@@ -60,12 +60,16 @@ jQuery(function($) {
 		 _this.attr({
 			 'data-container':"body",
 			 'data-toggle':"popover",
-			 'data-placement':"bottom",
 			 'data-content':content,
 			 'data-original-title':title,
 			 'title':""
 		 })
 		 .popover()
-		 .on('click.preventDefault',function(e){e.preventDefault()});
+		 .on('click.preventDefault',function(e){e.preventDefault()})
+		 .hover(function(){
+			 jQuery(this).click();
+		 },function(){
+			 jQuery(this).click();
+		 });
 	 })
 })
