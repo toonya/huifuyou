@@ -4,7 +4,13 @@ $cur_browser = new Browser();
 $browser_name = $cur_browser->getBrowser();
 $browser_version = $cur_browser->getVersion();
 
-if($browser_name=='Internet Explorer' && $browser_version<8){
+if($browser_name=='Internet Explorer' && $browser_version<8)
+	browser_alert();
+if($browser_name=='Mozilla' && $browser_version<6)
+	browser_alert();
+
+
+function browser_alert() {
 	wp_die('<p>Please update your browser.</p>
 			<p>请更新您的浏览器到较新的版本，点击下列列表中的浏览器，直接下载。</p>
 			<ul>
@@ -14,7 +20,6 @@ if($browser_name=='Internet Explorer' && $browser_version<8){
 			</ul>
 			');
 }
-
 
 class Browser {
     private $_agent = '';
