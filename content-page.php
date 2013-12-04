@@ -13,14 +13,14 @@
     <div class="flink">
     	<p style="width:900px; margin:0 auto; font-family:Microsoft YaHei,微软雅黑; margin-bottom:10px;">友情链接：</p>
         <ul>
-        	<li class="m-bottom-30"><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-1.jpg"></a></li>
-            <li class="m-bottom-30"><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-2.jpg"></a></li>
+        	<li class="m-bottom-30"><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/yeahka.png"></a></li>
+            <li class="m-bottom-30"><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/unionpay.jpg"></a></li>
             <li class="m-bottom-30"><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-3.jpg"></a></li>
             <li class="m-bottom-30"><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-4.jpg"></a></li>
             <li><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-5.jpg"></a></li>
             <li><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-6.jpg"></a></li>
-            <li><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/yeahka.png"></a></li>
-            <li><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/unionpay.jpg"></a></li>
+            <li><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-1.jpg"></a></li>
+            <li><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-2.jpg"></a></li>
         </ul>
     </div>
     <!--end code-->
