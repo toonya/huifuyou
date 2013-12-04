@@ -49,7 +49,7 @@ add_action('admin_init', 'add_setting_func');
 function add_setting_section() {
 }
 function add_setting_stats() {
-	echo '<a target="_blank" href="http://51.la">登录 51la 网站</a>';
+	echo '<a target="_blank" href="http://51.la">登录 51la 网站</a>测试账户huifuyou密码huifuyou';
 	echo '<textarea name="51la" value="" class="form-control" rows="3">'.esc_attr(get_option('51la')).'</textarea>';
 }
 
