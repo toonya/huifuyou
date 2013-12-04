@@ -47,6 +47,13 @@ jQuery(function($) {
 		 	jQuery(e).html(new_content);
 	     });
 	 }
+	 else {
+	 	 var size = $('.carousel-nav li').size();
+	 	 size = parseInt(12/size);
+		 $('.carousel-nav li').each(function(i,e){
+			 jQuery(e).css({'display':'block'}).addClass('col-xs-'+size);
+		 })
+	 }
 
      // ----------------------------------------
      // ! popover

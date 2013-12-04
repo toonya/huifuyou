@@ -55,7 +55,7 @@
                 $banner_list = get_option('bannerlist');
                 $banner_control = '';
                 $nav_animation = true;
-                if(belowIE(8) || isMobile())
+                if(belowIE(9) || isMobile())
                 	$nav_animation = false;
 				if($banner_list):;
             ?>
