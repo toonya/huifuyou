@@ -44,7 +44,7 @@
             	<!-- end container -->
             </div>
             <!-- end siteinfo -->
-            <?php if(!belowIE(9)):; ?>
+            <?php if(!belowIE(9) && !isMobile()):; ?>
             <nav class="nav-wrapper"><div class="container"><?php wp_nav_menu( array( 'theme_location' => 'header-menu','container'=>'false','menu_class'=>'nav nav-justified' ) );?></div></nav>
             <?php else: ?>
             <nav class="nav-wrapper"><div class="container"><?php wp_nav_menu( array( 'theme_location' => 'header-menu','container'=>'false','menu_class'=>'nav nav-float' ) );?></div></nav>

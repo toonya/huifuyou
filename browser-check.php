@@ -29,6 +29,15 @@ function belowIE($version){
 		return true;
 }
 
+// ----------------------------------------
+// ! isMobile
+// ----------------------------------------
+function isMobile() {
+	$cur_browser = new Browser();
+	$isMobile = $cur_browser->isMobile();
+	return $isMobile;
+}
+
 
 class Browser {
     private $_agent = '';
