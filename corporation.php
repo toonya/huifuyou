@@ -38,11 +38,11 @@ h2 {
                 <h2>申请渠道条件</h2>
                 <img class="img-responsive center-block" src="<?php echo get_template_directory_uri()?>/images/corporation/4.png">
                 <h2>申请流程</h2>
-                <img class="img-responsive center-block" src="<?php echo get_template_directory_uri()?>/images/corporation/5.png">
-            <!--结束代码-->
-                <h2>让我们联系您</h2>
+                <img class="img-responsive center-block" src="<?php echo get_template_directory_uri()?>/images/corporation/5.png">            
+                <h2>意向合作</h2>
                 <div class="container"><div class="col-xs-8 col-xs-offset-1"><?php the_content(); ?></div></div>
 			<?php endwhile; // end of the loop. ?>
+            <!--结束代码-->
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
