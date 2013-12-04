@@ -60,6 +60,7 @@ jQuery(function($) {
 		 _this.attr({
 			 'data-container':"body",
 			 'data-toggle':"popover",
+			 'data-placement':'top',
 			 'data-content':content,
 			 'data-original-title':title,
 			 'title':""
@@ -67,9 +68,9 @@ jQuery(function($) {
 		 .popover()
 		 .on('click.preventDefault',function(e){e.preventDefault()})
 		 .hover(function(){
-			 jQuery(this).click();
+			 jQuery(this).popover('show');
 		 },function(){
-			 jQuery(this).click();
+			 jQuery(this).popover('hide');
 		 });
 	 })
 })
