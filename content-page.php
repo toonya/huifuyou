@@ -5,7 +5,7 @@
     	<img class="img-responsive" style="margin:0 auto;" src="<?php echo get_template_directory_uri();?>/images/assets/features.png" />
     </div>
     <style type="text/css">
-			.flink { margin-top:100px; }
+			.flink { margin-top:100px; padding-top:40px; border-top:1px solid #999;  }
 			.flink ul { width:900px; margin:0 auto; height:115px; list-style:none; }
 			.flink ul li { float:left; margin-right:35px; }
 			.m-bottom-30 { margin-bottom:30px; }
