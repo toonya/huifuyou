@@ -4,6 +4,9 @@
 				<p><a href="">关于我们</a> I <a href="">联系我们</a></p>
 				<p>版权所有 Copyright(C)2012-2020 郑州汇付友科技有限公司</p>
 			</div>
+			<div class="hide">
+				<?php echo esc_html(get_option('51la')); ?>
+			</div>
 		</footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- //code.jquery.com/jquery.js -->
