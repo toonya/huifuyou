@@ -24,7 +24,8 @@
             	        <div class="share">
             	            <?php require_once("sharejiathis.php"); ?>
             	        </div>
-            	        <div class="user">
+            	        <!--
+<div class="user">
             	            <a href="<?php echo esc_attr(get_option('headerLoginUrl')) ?>" class="login">
             	                <span class="glyphicon glyphicon-user"></span>
             	                登录
@@ -33,6 +34,7 @@
             	                立即注册
             	            </a>
             	        </div>
+-->
             	        <div class="clearfix"></div>
             	    </div>
             	    <div class="logo">
