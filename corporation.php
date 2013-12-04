@@ -26,7 +26,6 @@ h2 {
 			<?php while ( have_posts() ) : the_post(); ?>
 
             <!--开始代码-->
-            	<h1>test</h1>
                 <img class="img-responsitive"
                      src="<?php echo get_template_directory_uri()?>/images/corporation/corporation.png">
                 <h2>什么是乐刷商务版</h2>
