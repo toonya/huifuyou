@@ -263,6 +263,16 @@ if(!post_type_exists('employee_news'))
 	add_action( 'init', 'employee_news' );
 
 // ----------------------------------------
+// ! remove logo
+// ----------------------------------------
+function my_custom_login_logo()
+{
+    echo '<style  type="text/css">.login h1 a {  	background-image: none; } </style>';
+}
+add_action('login_head',  'my_custom_login_logo');
+
+
+// ----------------------------------------
 // ! custom page
 // ----------------------------------------
 
