@@ -41,7 +41,7 @@ h2 {
                 <img class="img-responsive center-block" src="<?php echo get_template_directory_uri()?>/images/corporation/5.png">
             <!--结束代码-->
                 <h2>让我们联系您</h2>
-                <div class="container"><div class="col-xs-8 col-xs-offset-1"><?php the_content(); ?></div></div>
+                <div class="container"><div class="col-xs-8 col-xs-offset-2"><?php the_content(); ?></div></div>
 			<?php endwhile; // end of the loop. ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->

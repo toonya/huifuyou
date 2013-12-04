@@ -54,9 +54,12 @@
             <?php
                 $banner_list = get_option('bannerlist');
                 $banner_control = '';
+                $nav_animation = true;
+                if(belowIE(9) || isMobile())
+                	$nav_animation = false;
 				if($banner_list):;
             ?>
-            <div id="banner" class="carousel slide">
+            <div id="banner" class="carousel slide" data-nav-animation=<?php echo $nav_animation; ?>>
 
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
