@@ -35,7 +35,7 @@ jQuery(function($) {
      // ----------------------------------------
      // ! banner nav animation effect
      // ----------------------------------------
-	 if(jQuery('#banner').data('nav-animation')){
+	 if(!jQuery('#banner').data('nav-animation')){
 	     $('.carousel-nav li').each(function(i,e) {
 	     	var origin_content = jQuery(e).text();
 	     	var new_content = jQuery('<div>');
@@ -49,9 +49,9 @@ jQuery(function($) {
 	 }
 	 else {
 	 	 var size = $('.carousel-nav li').size();
-	 	 size = parseInt(12/size);
+	 	 size = parseInt(100/size);
 		 $('.carousel-nav li').each(function(i,e){
-			 jQuery(e).css({'display':'block'}).addClass('col-xs-'+size);
+			 jQuery(e).css({'display':'block'}).css({'width':size+'%','float':'left'});
 		 })
 	 }
 
