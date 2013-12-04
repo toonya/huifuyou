@@ -46,4 +46,26 @@ jQuery(function($) {
      	new_content.addClass('slide-bar-wrap').html(slide_top);
 	 	jQuery(e).html(new_content);
      });
+
+     // ----------------------------------------
+     // ! popover
+     // ----------------------------------------
+	 jQuery('[href*="tc="]').each(function(index,ele) {
+		 var _this = jQuery(ele);
+		 var title = _this.attr('href');
+		 var remove = /tc=/;
+		 title = title.replace(remove,'');
+		 var content = _this.attr('title');
+
+		 _this.attr({
+			 'data-container':"body",
+			 'data-toggle':"popover",
+			 'data-placement':"bottom",
+			 'data-content':content,
+			 'data-original-title':title,
+			 'title':""
+		 })
+		 .popover()
+		 .on('click.preventDefault',function(e){e.preventDefault()});
+	 })
 })
