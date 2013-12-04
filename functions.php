@@ -280,3 +280,7 @@ require_once('browser-check.php');
 // ----------------------------------------
 require_once('banner-option.php');
 
+// ----------------------------------------
+// ! additional info area.
+// ----------------------------------------
+require_once('add-setting.php');
