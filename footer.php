@@ -5,7 +5,7 @@
 				<p>版权所有 Copyright(C)2012-2020 郑州汇付友科技有限公司</p>
 			</div>
 			<div class="hide">
-				<?php echo esc_html(get_option('51la')); ?>
+				<?php echo get_option('51la'); ?>
 			</div>
 		</footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
