@@ -24,11 +24,11 @@
             	            <?php require_once("sharejiathis.php"); ?>
             	        </div>
             	        <div class="user">
-            	            <a href="http://www.yeahka.com/login.html?return_url=http%3A%2F%2Fwww.yeahka.com%2F" class="login">
+            	            <a href="<?php echo esc_attr('headerLoginUrl') ?>" class="login">
             	                <span class="glyphicon glyphicon-user"></span>
             	                登录
             	            </a>
-            	            <a href="http://www.yeahka.com/register.html?return_url=http%3A%2F%2Fwww.yeahka.com%2F" class="register btn btn-warning btn-lg">
+            	            <a href="<?php echo esc_attr('headerRegistUrl') ?>" class="register btn btn-warning btn-lg">
             	                立即注册
             	            </a>
             	        </div>
