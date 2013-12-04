@@ -183,6 +183,9 @@ jQuery(function($){
 	// ! save banner option
 	// ----------------------------------------
 	function save_banner_option() {
+		var status_container = jQuery('#banner-option h1').first();
+		status_container.attr('data-origin-title',status_container.text()).text('正在处理...');
+
 		var banner_data = banner_option;
 		banner_data.bannerlist = [];
 
@@ -198,7 +201,15 @@ jQuery(function($){
 		});
 
 		//post to server.
-		jQuery.post(banner_data.url, banner_data, function(response) {}).done(function(){console.log('done')}).fail(function(){console.log('failed')});
+		jQuery.post(banner_data.url, banner_data, function(response) {})
+			.done(function(){
+				status_container.text('保存成功！');
+				setTimeout(function(){jQuery('#banner-option h1').first().text(jQuery('#banner-option h1').first().data('origin-title'))},1000);
+				})
+			.fail(function(){
+				status_container.text('请重新保存！');
+				setTimeout(function(){jQuery('#banner-option h1').first().text(jQuery('#banner-option h1').first().data('origin-title'))},1000);
+			});
 	}
 
 	// ----------------------------------------
@@ -267,7 +278,7 @@ jQuery(function($){
 	// ----------------------------------------
 	jQuery('#banner-option').on('focusin.removeError','.inputError',function(){
 		jQuery(this).removeClass('inputError');
-	})
+	});
 })
 
 
