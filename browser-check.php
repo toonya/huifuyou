@@ -22,6 +22,7 @@ function browser_alert() {
 function isIE($version){
 	if(!$version)
 		$version = 9;
+function belowIE($version){
 	$cur_browser = new Browser();
 	$browser_name = $cur_browser->getBrowser();
 	$browser_version = $cur_browser->getVersion();
