@@ -38,10 +38,21 @@ function add_setting_func() {
                        'add_setting_stats',
                        'add-setting',
                        'add_setting');
-
+    add_settings_field('headerLoginUrl',
+                       '页头登录超链接',
+                       'header_login_url',
+                       'add-setting',
+                       'add_setting');
+    add_settings_field('headerRegistUrl',
+                       '页头注册超链接',
+                       'header_regist_url',
+                       'add-setting',
+                       'add_setting');
     // Register our setting so that $_POST handling is done for us and
     // our callback function just has to echo the <input>
     register_setting('add-setting','51la');
+    register_setting('add-setting','headerLoginUrl');
+    register_setting('add-setting','headerRegistUrl');
 }// eg_settings_api_init()
 
 add_action('admin_init', 'add_setting_func');
@@ -51,6 +62,12 @@ function add_setting_section() {
 function add_setting_stats() {
 	echo '<a target="_blank" href="http://51.la">登录 51la 网站</a>测试账户huifuyou密码huifuyou';
 	echo '<textarea name="51la" value="" class="form-control" rows="3">'.esc_attr(get_option('51la')).'</textarea>';
+}
+function header_login_url() {
+	echo '<input name="headerLoginUrl" type="text" class="form-control" value="'.esc_attr(get_option('headerLoginUrl')).'" />';
+}
+function header_regist_url() {
+	echo '<input name="headerRegistUrl" type="text" class="form-control" value="'.esc_attr(get_option('headerRegistUrl')).'" />';
 }
 
 ?>
