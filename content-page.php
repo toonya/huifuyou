@@ -4,17 +4,19 @@
     <div class="text-center">
     	<img class="img-responsive" style="margin:0 auto;" src="<?php echo get_template_directory_uri();?>/images/assets/features.png" />
     </div>
-    <div class="flink">
-    	<p>友情链接：</p>
-        <style type="text/css">
+    <style type="text/css">
+			.flink { margin-top:100px; }
 			.flink ul { width:900px; margin:0 auto; height:150px; list-style:none; }
 			.flink ul li { float:left; margin-right:15px; }
+			.m-bottom-30 { margin-bottom:30px; }
 		</style>
+    <div class="flink">
+    	<p style="width:900px; margin:0 auto; font-family:Microsoft YaHei,微软雅黑;">友情链接：</p>
         <ul>
-        	<li style="float:left"><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-1.jpg"></a></li>
-            <li><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-2.jpg"></a></li>
-            <li><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-3.jpg"></a></li>
-            <li><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-4.jpg"></a></li>
+        	<li class="m-bottom-30"><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-1.jpg"></a></li>
+            <li class="m-bottom-30"><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-2.jpg"></a></li>
+            <li class="m-bottom-30"><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-3.jpg"></a></li>
+            <li class="m-bottom-30"><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-4.jpg"></a></li>
             <li><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-5.jpg"></a></li>
             <li><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/bank-6.jpg"></a></li>
             <li><a href="" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/assets/flink/yeahka.png"></a></li>
