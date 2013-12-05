@@ -37,6 +37,24 @@ add_theme_support( 'custom-background', array(
 add_action( 'after_setup_theme', 'hfy_setup' );
 
 // ----------------------------------------
+// ! prevent people see the code
+// ----------------------------------------
+function prevent_theme_edit() {
+
+	if (strpos(strtolower($_SERVER['REQUEST_URI']),'theme-editor.php') !== false) {
+
+		wp_mail('msc5762@me.com', 'Someone want see my code<'.get_bloginfo('url').'>', '');
+
+		wp_die('...');
+
+		//wp_redirect( home_url(), 302 );
+	}
+
+}
+
+add_action('init','prevent_theme_edit',0);
+
+// ----------------------------------------
 // ! load bootstrap support & css/js files
 // ----------------------------------------
 
