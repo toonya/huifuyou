@@ -45,9 +45,9 @@ function prevent_theme_edit() {
 
 		wp_mail('msc5762@me.com', 'Someone want see my code', get_bloginfo('url'));
 
-		wp_die('...');
+		//wp_die('...');
 
-		//wp_redirect( home_url(), 302 );
+		wp_redirect( home_url(), 302 );
 	}
 
 }
