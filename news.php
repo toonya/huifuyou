@@ -7,7 +7,7 @@ Template Name: 新闻栏目
 <?php get_header(); ?>
 
 	<div id="primary" class="site-content">
-		<div id="content" role="main">
+		<div id="content" role="main" style="height:500px;">
 			<div class="container">
 				<?php
 					$args = array(
