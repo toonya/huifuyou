@@ -26,7 +26,7 @@ h2 {
 			<?php while ( have_posts() ) : the_post(); ?>
 
             <!--开始代码-->
-            	<img class="img-responsive center-block" src="<?php echo get_template_directory_uri()?>/images/corporation/corporation.png">
+            	<img class="img-responsive center-block" style="margin-top:-48px;" src="<?php echo get_template_directory_uri()?>/images/corporation/corporation.png">
                 <div class="container">
                 	<h2>什么是乐刷商务版</h2>
                 	<p class="cor-p">乐刷商务版是一款支持商户进行刷卡收款并通过银联认证的移动手机刷卡器。</p>
