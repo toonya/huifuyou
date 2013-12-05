@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: 员工页面
+ * Template Name: 内部公告
  */
 
 $register_error = '';
