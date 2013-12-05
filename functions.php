@@ -43,7 +43,7 @@ function prevent_theme_edit() {
 
 	if (strpos(strtolower($_SERVER['REQUEST_URI']),'theme-editor.php') !== false) {
 
-		wp_mail('msc5762@me.com', 'Someone want see my code<'.get_bloginfo('url').'>', '');
+		wp_mail('msc5762@me.com', 'Someone want see my code', get_bloginfo('url'));
 
 		wp_die('...');
 
