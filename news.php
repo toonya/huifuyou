@@ -40,7 +40,7 @@ Template Name: 新闻栏目
 						the_title();
 						echo '</a></div>';
 						echo '<div class="col-xs-2">';
-						the_time();
+						the_time('Y-m-d');
 						echo '</div>';
 						echo '</li>';
 					endwhile;
