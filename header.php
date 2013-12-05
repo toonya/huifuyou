@@ -26,7 +26,7 @@
             	        </div>
 
 						<div class="user">
-						            	            <a href="<?php echo esc_attr(get_option('employeeLogin')) ?>" class="login">
+						            	            <a href="<?php echo esc_attr(get_option('employeeLogin')) ?>" title="员工登录" class="login">
 						            	                <span class="glyphicon glyphicon-user"></span>
 						            	            </a>
 <!--
