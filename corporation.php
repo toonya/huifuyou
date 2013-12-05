@@ -7,7 +7,7 @@ Template Name: 渠道合作
 <?php get_header();?>
 
 <style type="text/css">
-h2, .cor-p { width:1000px;
+h2, .cor-p {
      margin:0 auto;
 	 text-align:left;
 	 font-family:Microsoft YaHei,微软雅黑;
@@ -39,7 +39,7 @@ h2 {
                 <img class="img-responsive center-block" src="<?php echo get_template_directory_uri()?>/images/corporation/4.png">
                 <h2>申请流程</h2>
                 <img class="img-responsive center-block" src="<?php echo get_template_directory_uri()?>/images/corporation/5.png">
-            <!--结束代码-->            
+            <!--结束代码-->
                 <h2>意向合作</h2>
                 <div class="container"><div class="col-xs-8 col-xs-offset-1"><?php the_content(); ?></div></div>
 			<?php endwhile; // end of the loop. ?>
