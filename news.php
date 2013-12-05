@@ -30,16 +30,16 @@ Template Name: 新闻栏目
 					$the_query = new WP_Query( $args );
 
 					// The Loop
-					echo '<ul class="list-group center-block" style="width:70%;">';
+					echo '<ul class="list-unstyled center-block">';
 					while ( $the_query->have_posts() ) :
 						$the_query->the_post();
 						echo '<li>';
-						echo '<div class="col-sm-10"><a href="';
+						echo '<div class="col-xs-10 col-lg-offset-2 col-lg-7"><a href="';
 						the_permalink();
 						echo '">';
 						the_title();
 						echo '</a></div>';
-						echo '<div class="col-sm-2">';
+						echo '<div class="col-xs-2">';
 						the_time();
 						echo '</div>';
 						echo '</li>';
