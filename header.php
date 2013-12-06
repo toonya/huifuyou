@@ -15,7 +15,6 @@
         <?php wp_head(); ?>
     </head>
     <body>
-    	<?php browser_info(); ?>
     	<!-- class="auto-add-bg bg-cover" data-bg-src="<?php echo get_template_directory_uri();?>/images/bgheader.jpg" -->
         <header>
             <div class="siteinfo">
@@ -57,7 +56,7 @@
                 $banner_list = get_option('bannerlist');
                 $banner_control = '';
                 $nav_animation = true;
-                if(belowIE(9) || isMobile())
+                if(isIE() || isMobile())
                 	$nav_animation = false;
 				if($banner_list):;
             ?>

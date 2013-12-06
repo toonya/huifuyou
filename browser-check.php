@@ -1,6 +1,6 @@
 <?php
 
-if(belowIE(8))
+if(belowIE(9))
 	browser_alert();
 
 
@@ -37,12 +37,16 @@ function belowIE($version){
 		return true;
 }
 
-function browser_info() {
+// ----------------------------------------
+// ! isIE
+// ----------------------------------------
+function isIE(){
 	$cur_browser = new Browser();
 	$browser_name = $cur_browser->getBrowser();
 	$browser_version = $cur_browser->getVersion();
-	
-	echo $browser_name.' : '.$browser_version;
+
+	if($browser_name=='Internet Explorer')
+		return true;
 }
 
 // ----------------------------------------
