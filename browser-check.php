@@ -1,6 +1,6 @@
 <?php
 
-if(belowIE(9))
+if(belowIE(8))
 	browser_alert();
 
 
