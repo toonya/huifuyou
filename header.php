@@ -19,7 +19,6 @@
         <header>
             <div class="siteinfo">
             	<div class="container">
-                    <p style="text-align:inherit;font-size:12px;margin-bottom:-20px;color:#999;">代理商代码：14</p>
             	    <div class="pull-right">
             	        <div class="share">
             	            <?php require_once("sharejiathis.php"); ?>
