@@ -234,25 +234,10 @@ jQuery(function($){
 	// ----------------------------------------
 	jQuery('#banner-option').on('keydown.inputDone', 'input.imgurl' ,inputDone);
 
-	var backspace_counter = 0;
-
 	function inputDone(e){
 		charCode = e.charCode || e.keyCode;
 
-		if(charCode == 8){
-			backspace_counter = backspace_counter+1;
-
-			if(backspace_counter >= 3 || jQuery(this).val().length==1){
-				jQuery(this).val('').focusout();
-			}
-		}
-
-		if(charCode != 108 && charCode !=8 && charCode !=27){
-			backspace_counter = 0;
-		}
-
 		if(charCode  == 13){
-			backspace_counter = 0;
 			jQuery(this).focusout();
 		}
 	}
