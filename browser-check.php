@@ -37,6 +37,14 @@ function belowIE($version){
 		return true;
 }
 
+function browser_info() {
+	$cur_browser = new Browser();
+	$browser_name = $cur_browser->getBrowser();
+	$browser_version = $cur_browser->getVersion();
+	
+	echo $browser_name.' : '.$browser_version;
+}
+
 // ----------------------------------------
 // ! isMobile
 // ----------------------------------------
