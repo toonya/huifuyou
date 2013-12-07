@@ -115,6 +115,12 @@ html,body{
 	}
 }
 
+nav.affix{
+	top:0;
+	width: 100%;
+	z-index: 999;
+}
+
 // ----------------------------------------
 // ! Customer Carousel
 // ----------------------------------------
@@ -169,6 +175,26 @@ html,body{
 		.slide-bar-wrap{
 			.silde-bar-top{
 				top: 0;
+			}
+		}
+	}
+}
+
+// ----------------------------------------
+// ! carousel nav on ie
+// ----------------------------------------
+.nav-ie{
+	.carousel-nav{
+		li{
+			float: left;
+			height: 48px;
+			border-top: @dark-blue 4px solid;
+			line-height: 44px;
+
+			&.active {
+				border-top: none;
+				border-bottom: @dark-blue 4px solid;
+				background: #fff;
 			}
 		}
 	}

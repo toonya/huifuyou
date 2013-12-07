@@ -48,11 +48,24 @@ jQuery(function($) {
 	     });
 	 }
 	 else {
+
+	 	jQuery('#banner').addClass('nav-ie');
+
+	 // ----------------------------------------
+	 // ! if is ie, calculate the width.
+	 // ----------------------------------------
+
 	 	 var size = $('.carousel-nav li').size();
-	 	 size = parseInt(100/size);
+	 	 console.log(size);
+	 	 var li_width = parseInt(100/size);
+	 	 var last_li_width = 100 - li_width * ( size - 1 );
 		 $('.carousel-nav li').each(function(i,e){
-			 jQuery(e).css({'display':'block'}).css({'width':size+'%','float':'left','padding':'6px'});
-		 })
+		 	console.log(i);
+		 	if( ( i + 1 ) != size )
+				jQuery(e).css({'display':'block'}).css({'width':li_width+'%'});
+			else
+				jQuery(e).css({'display':'block'}).css({'width':last_li_width+'%'});
+		 });
 	 }
 
      // ----------------------------------------
@@ -88,4 +101,18 @@ jQuery(function($) {
 	 jQuery('a[href=""]').click(function(e) {
 		 e.preventDefault();
 	 })
+
+	 // ----------------------------------------
+	 // ! affix
+	 // ----------------------------------------
+	   $('nav.nav-wrapper').affix({
+	    offset: {
+	      top: 81
+/*
+	    , bottom: function () {
+	        return (this.bottom = $('.bs-footer').outerHeight(true))
+	      }
+*/
+	    }
+	  })
 })
