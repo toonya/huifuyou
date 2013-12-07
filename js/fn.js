@@ -108,11 +108,9 @@ jQuery(function($) {
 	   $('nav.nav-wrapper').affix({
 	    offset: {
 	      top: 81
-/*
-	    , bottom: function () {
-	        return (this.bottom = $('.bs-footer').outerHeight(true))
-	      }
-*/
 	    }
 	  })
+
+	  if(jQuery('#wpadminbar'))
+	  	$('nav.nav-wrapper').addClass('admin-logined');
 })
