@@ -56,11 +56,11 @@ jQuery(function($) {
 	 // ----------------------------------------
 
 	 	 var size = $('.carousel-nav li').size();
-	 	 console.log(size);
+
 	 	 var li_width = parseInt(100/size);
 	 	 var last_li_width = 100 - li_width * ( size - 1 );
 		 $('.carousel-nav li').each(function(i,e){
-		 	console.log(i);
+
 		 	if( ( i + 1 ) != size )
 				jQuery(e).css({'display':'block'}).css({'width':li_width+'%'});
 			else
@@ -113,4 +113,22 @@ jQuery(function($) {
 
 	  if(jQuery('#wpadminbar'))
 	  	$('nav.nav-wrapper').addClass('admin-logined');
+
+	  jQuery('.wpcf7 [type="tel"]').focusout(function(e){
+	  	  var _validation = jQuery(this).closest('.wpcf7').find('[type="tel"]').val().match(/^1[3|4|5|8][0-9]\d{4,8}$/);
+	  	  var _alert = '请输入11位手机号';
+	  	  var _valid = jQuery(this).siblings('.wpcf7-not-valid-tip');
+
+		  if(!_validation) {
+		  	  console.log(_valid);
+			  if(_valid.size()){
+  			  	_valid.text(_alert).show();
+			  }
+			  else
+			  	jQuery(this).after('<span class="wpcf7-not-valid-tip">'+_alert+'</span>');
+			  jQuery(this).focus();
+		  }
+		  else
+		  	_alert.hide();
+	  })
 })
