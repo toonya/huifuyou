@@ -117,6 +117,7 @@ jQuery(function($) {
     // ----------------------------------------
     // ! tel num valid
     // ----------------------------------------
+    jQuery('.wpcf7-submit').hide().after('<button class="btn btn-default">发送<button>');
 
     jQuery('.wpcf7 [type="tel"]').focusout(tel_valid).keyup(tel_valid);
 
