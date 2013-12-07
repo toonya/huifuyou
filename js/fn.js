@@ -1,7 +1,6 @@
 jQuery(function($) {
     $('.current-menu-item').addClass('active');
 
-
     // ----------------------------------------
     // ! let it become a plugin later, so can add 150*150 etc. function.
     // ----------------------------------------
