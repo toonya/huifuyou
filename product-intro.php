@@ -17,7 +17,7 @@ p { text-align:center; }
             <div style="background:#f4f4f4">
                 <img class="img-responsive" src="<?php echo get_template_directory_uri()?>/images/product-intro/product-intro-2.jpg">
                 <p style="font-family:Microsoft YaHei,微软雅黑;font-size:24px;margin:50px 50px 10px 50px;">乐刷商务版是一款支持商户进行刷卡收款，并通过银联认证的移动手机刷卡器。可以用于门店收款或上门收款。</p>
-                <p style="text-align:right;font-family:Microsoft YaHei,微软雅黑;font-size:14px;margin:0px 110px 50px 50px;"><a style="background:lightblue; border-radius:3px;padding:5px;" href="<?php bloginfo('url')?>/leshua/?page_id=95" target="_blank">关于乐刷＞＞</a></p>
+                <p style="text-align:right;font-family:Microsoft YaHei,微软雅黑;font-size:14px;margin:0px 110px 50px 50px;"><a style="background:lightblue; border-radius:3px;padding:5px;" href="<?php bloginfo('url')?>/?page_id=95" target="_blank">关于乐刷＞＞</a></p>
                 <div class="my-leshua">
                     <p>您可以在此放置您们公司自行拍摄的产品介绍媒体文件。如flash动画、360度展示视频、打有公司水印的实物图片等。这将极大地提高贵公司的形象水平，也能令贵公司的网站更加个性化更有公司特色。（乐刷官方并无相应的富媒体文件。）</p>
                 </div>
