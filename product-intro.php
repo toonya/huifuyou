@@ -7,7 +7,7 @@ Template Name: 产品介绍
 <?php get_header(); ?>
 <style type="text/css">
 p { text-align:center; }
-.my-leshua { height:200px; background:#e9e7e7;padding:50px 200px;color:#ddd;font-family:Microsoft YaHei,微软雅黑;font-size:20px;margin:0 100px; }
+.my-leshua { height:200px; border:1px dashed #ccc;padding:50px 200px;color:#ccc;font-family:Microsoft YaHei,微软雅黑;font-size:20px;margin:0 100px; }
 </style>
 	<div id="primary" class="site-content">
 		<div id="content" role="main" style="padding:0;">
