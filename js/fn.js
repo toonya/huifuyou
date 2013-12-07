@@ -117,14 +117,15 @@ jQuery(function($) {
     // ----------------------------------------
     // ! tel num valid
     // ----------------------------------------
-    jQuery('.wpcf7-submit').hide().after('<button class="btn btn-default">发送<button>');
+    jQuery('.wpcf7-submit').attr('type','hidden').before('<button class="btn btn-default custom-submit">发送</button>');
 
-    jQuery('.wpcf7 [type="tel"]').focusout(tel_valid).keyup(tel_valid);
+    jQuery('.custom-submit').click(function(e){
+	    e.preventDefault();
 
-    function tel_valid() {
-        var _validation = jQuery(this).closest('.wpcf7').find('[type="tel"]').val().match(/^1[3|4|5|8][0-9]\d{8}$/);
+	    var $tel = jQuery(this).closest('.wpcf7').find('[type="tel"]');
+        var _validation = $tel.val().match(/^1[3|4|5|8][0-9]\d{8}$/);
         var _alert = '请输入11位手机号';
-        var _valid = jQuery(this).siblings('.wpcf7-not-valid-tip');
+        var _valid = $tel.siblings('.wpcf7-not-valid-tip');
         _valid.hide();
 
         if(!_validation) {
@@ -132,9 +133,14 @@ jQuery(function($) {
                 _valid.text(_alert).show();
             }
             else
-                jQuery(this).after('<span class="wpcf7-not-valid-tip">'+_alert+'</span>');
+                $tel.after('<span class="wpcf7-not-valid-tip">'+_alert+'</span>');
         }
-        else
-            _valid.hide();
-    }
+        else{
+            jQuery('.wpcf7-form').submit();
+        }
+    })
+
+    jQuery('[type="tel"]').focusin(function(e){
+	    jQuery(this).siblings('.wpcf7-not-valid-tip').remove();
+    })
 })
