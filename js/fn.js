@@ -8,128 +8,133 @@ jQuery(function($) {
 
 
     $('.auto-add-bg').each(function(i,e) {
-	    var bgSrc = jQuery(e).data('bg-src');
+        var bgSrc = jQuery(e).data('bg-src');
 
-	    if(bgSrc) {
-			jQuery(e).css({background:'url('+bgSrc+') center top'});
-	    }
+        if(bgSrc) {
+            jQuery(e).css({background:'url('+bgSrc+') center top'});
+        }
     });
 
     // ----------------------------------------
     // ! banner nav hover
     // ----------------------------------------
 
-     $('.carousel-nav li').hover(
-     	function(){
-     		jQuery(this).addClass('hover');
-     	},
-     	function(){
-     		jQuery(this).removeClass('hover');
-     	}
-     ).click(function(e){
-	     if(jQuery(this).hasClass('active'))
-	     	return;
-	     else jQuery(this).addClass('active').siblings().removeClass('active');
-     });
+    $('.carousel-nav li').hover(
+        function(){
+            jQuery(this).addClass('hover');
+        },
+        function(){
+            jQuery(this).removeClass('hover');
+        }
+    ).click(function(e){
+        if(jQuery(this).hasClass('active'))
+            return;
+        else jQuery(this).addClass('active').siblings().removeClass('active');
+    });
 
-     // ----------------------------------------
-     // ! banner nav animation effect
-     // ----------------------------------------
-	 if(jQuery('#banner').data('nav-animation')){
-	     $('.carousel-nav li').each(function(i,e) {
-	     	var origin_content = jQuery(e).text();
-	     	var new_content = jQuery('<div>');
-	     	var slide_top = $('<div>').addClass('silde-bar-top').html(origin_content);
-	     	var slide_bottom = $('<div>').addClass('silde-bar-bottom').html(origin_content);
-	     	slide_top.append(slide_bottom);
-	     	// Process the content
-	     	new_content.addClass('slide-bar-wrap').html(slide_top);
-		 	jQuery(e).html(new_content);
-	     });
-	 }
-	 else {
+    // ----------------------------------------
+    // ! banner nav animation effect
+    // ----------------------------------------
+    if(jQuery('#banner').data('nav-animation')){
+        $('.carousel-nav li').each(function(i,e) {
+            var origin_content = jQuery(e).text();
+            var new_content = jQuery('<div>');
+            var slide_top = $('<div>').addClass('silde-bar-top').html(origin_content);
+            var slide_bottom = $('<div>').addClass('silde-bar-bottom').html(origin_content);
+            slide_top.append(slide_bottom);
+            // Process the content
+            new_content.addClass('slide-bar-wrap').html(slide_top);
+            jQuery(e).html(new_content);
+        });
+    }
+    else {
 
-	 	jQuery('#banner').addClass('nav-ie');
+        jQuery('#banner').addClass('nav-ie');
 
-	 // ----------------------------------------
-	 // ! if is ie, calculate the width.
-	 // ----------------------------------------
+        // ----------------------------------------
+        // ! if is ie, calculate the width.
+        // ----------------------------------------
 
-	 	 var size = $('.carousel-nav li').size();
+        var size = $('.carousel-nav li').size();
 
-	 	 var li_width = parseInt(100/size);
-	 	 var last_li_width = 100 - li_width * ( size - 1 );
-		 $('.carousel-nav li').each(function(i,e){
+        var li_width = parseInt(100/size);
+        var last_li_width = 100 - li_width * ( size - 1 );
+        $('.carousel-nav li').each(function(i,e){
 
-		 	if( ( i + 1 ) != size )
-				jQuery(e).css({'display':'block'}).css({'width':li_width+'%'});
-			else
-				jQuery(e).css({'display':'block'}).css({'width':last_li_width+'%'});
-		 });
-	 }
+            if( ( i + 1 ) != size )
+                jQuery(e).css({'display':'block'}).css({'width':li_width+'%'});
+            else
+                jQuery(e).css({'display':'block'}).css({'width':last_li_width+'%'});
+        });
+    }
 
-     // ----------------------------------------
-     // ! popover
-     // ----------------------------------------
-	 jQuery('[href*="tc="]').each(function(index,ele) {
-		 var _this = jQuery(ele);
-		 var title = _this.attr('href');
-		 var remove = /tc=/;
-		 title = title.replace(remove,'');
-		 var content = _this.attr('title');
+    // ----------------------------------------
+    // ! popover
+    // ----------------------------------------
+    jQuery('[href*="tc="]').each(function(index,ele) {
+        var _this = jQuery(ele);
+        var title = _this.attr('href');
+        var remove = /tc=/;
+        title = title.replace(remove,'');
+        var content = _this.attr('title');
 
-		 _this.attr({
-			 'data-container':"body",
-			 'data-toggle':"popover",
-			 'data-placement':'top',
-			 'data-content':content,
-			 'data-original-title':title,
-			 'title':""
-		 })
-		 .popover()
-		 .on('click.preventDefault',function(e){e.preventDefault()})
-		 .hover(function(){
-			 jQuery(this).popover('show');
-		 },function(){
-			 jQuery(this).popover('hide');
-		 });
-	 });
+        _this.attr({
+            'data-container':"body",
+            'data-toggle':"popover",
+            'data-placement':'top',
+            'data-content':content,
+            'data-original-title':title,
+            'title':""
+        })
+        .popover()
+        .on('click.preventDefault',function(e){e.preventDefault()})
+        .hover(function(){
+            jQuery(this).popover('show');
+        },function(){
+            jQuery(this).popover('hide');
+        });
+    });
 
-	 // ----------------------------------------
-	 // ! preventDefault
-	 // ----------------------------------------
-	 jQuery('a[href=""]').click(function(e) {
-		 e.preventDefault();
-	 })
+    // ----------------------------------------
+    // ! preventDefault
+    // ----------------------------------------
+    jQuery('a[href=""]').click(function(e) {
+        e.preventDefault();
+    })
 
-	 // ----------------------------------------
-	 // ! affix
-	 // ----------------------------------------
-	   $('nav.nav-wrapper').affix({
-	    offset: {
-	      top: 81
-	    }
-	  })
+    // ----------------------------------------
+    // ! affix
+    // ----------------------------------------
+    $('nav.nav-wrapper').affix({
+        offset: {
+            top: 81
+        }
+    });
 
-	  if(jQuery('#wpadminbar'))
-	  	$('nav.nav-wrapper').addClass('admin-logined');
+    if($('#wpadminbar').size()){
+        $('nav.nav-wrapper').addClass('admin-logined');
+    }
 
-	  jQuery('.wpcf7 [type="tel"]').focusout(tel_valid).keyup(tel_valid);
+    // ----------------------------------------
+    // ! tel num valid
+    // ----------------------------------------
 
-	  function tel_valid() {
-		  var _validation = jQuery(this).closest('.wpcf7').find('[type="tel"]').val().match(/^1[3|4|5|8][0-9]\d{8}$/);
-	  	  var _alert = '请输入11位手机号';
-	  	  var _valid = jQuery(this).siblings('.wpcf7-not-valid-tip');
-	  	  _valid.hide();
+    jQuery('.wpcf7 [type="tel"]').focusout(tel_valid).keyup(tel_valid);
 
-		  if(!_validation) {
-			  if(_valid.size()){
-  			  	_valid.text(_alert).show();
-			  }
-			  else
-			  	jQuery(this).after('<span class="wpcf7-not-valid-tip">'+_alert+'</span>');
-		  }
-		  else
-		  	_valid.hide();
-	  }
+    function tel_valid() {
+        var _validation = jQuery(this).closest('.wpcf7').find('[type="tel"]').val().match(/^1[3|4|5|8][0-9]\d{8}$/);
+        var _alert = '请输入11位手机号';
+        var _valid = jQuery(this).siblings('.wpcf7-not-valid-tip');
+        _valid.hide();
+
+        if(!_validation) {
+            if(_valid.size()){
+                _valid.text(_alert).show();
+            }
+            else
+                jQuery(this).after('<span class="wpcf7-not-valid-tip">'+_alert+'</span>');
+        }
+        else
+            _valid.hide();
+    }
 })
