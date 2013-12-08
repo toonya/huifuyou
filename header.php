@@ -41,7 +41,7 @@
             	        <div class="clearfix"></div>
             	    </div>
             	    <div class="logo">
-            	        <a href="<?php echo bloginfo('url')?>"><img src="<?php echo get_template_directory_uri()?>/images/assets/logo.png" alt="" class="img-responsive" /><span style="font-size:18px;font-family:Microsoft YaHei,微软雅黑;color:#1d6ebf">代理商代码：00</span></a>
+            	        <a href="<?php echo bloginfo('url')?>"><img src="<?php echo get_template_directory_uri()?>/images/assets/logo.png" alt="" class="img-responsive" /></a>
             	    </div>
             	</div>
             	<!-- end container -->
