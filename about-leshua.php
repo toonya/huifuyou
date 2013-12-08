@@ -21,7 +21,6 @@ Template Name: 关于乐刷
                       <li><a href="#about-pos" data-toggle="tab" style="font-size:28px; font-family:Microsoft YaHei,微软雅黑;">关于乐POS</a></li>
                       <li><a href="#about-rate" data-toggle="tab" style="font-size:28px; font-family:Microsoft YaHei,微软雅黑;">关于费率</a></li>
                       <li><a href="#about-three-pay" data-toggle="tab" style="font-size:28px; font-family:Microsoft YaHei,微软雅黑;">关于第三方支付</a></li>
-                      <li><a href="#about-register" data-toggle="tab" style="font-size:28px; font-family:Microsoft YaHei,微软雅黑;">关于注册申请</a></li>
                     </ul>
                  </div>
                     <!-- Tab panes -->
@@ -59,13 +58,13 @@ Template Name: 关于乐刷
                 <!--//about-pos-->
                 <!--about-rate开始-->
                   <div class="tab-pane" id="about-rate">
-                  		<p>连锁民生类个体商户或有限公司（包括加油类，超市类，便民类，家用电器销售，手机话费充值）。可以申请0.5%费率。</p>
-                        <p>其他行业可以办理申请0.78%</p>
+                  		<p style="text-indent:2em">连锁民生类个体商户或有限公司（包括加油类，超市类，便民类，家用电器销售，手机话费充值）。可以申请0.5%费率。</p>
+                        <p style="text-indent:2em">其他行业可以办理申请0.78%</p>
                   </div>
                 <!--//about-rate-->
                 <!--about-three-pay开始-->
                   <div class="tab-pane" id="about-three-pay">
-                  		<p>深圳市移卡科技有限公司是一家以技术为导向的高科技移动支付公司，针对市场需求，我公司推出三代移动支付终端，第四代终端还在研发中。</p>
+                  		<p style="text-indent:2em">深圳市移卡科技有限公司是一家以技术为导向的高科技移动支付公司，针对市场需求，我公司推出三代移动支付终端，第四代终端还在研发中。</p>
                         <ul>
                             <li>公司自2011年初成立，即获得著名VC和腾讯的风险投资，注册资本1500万元。</li>
 							<li>初创团队由来自国内知名互联网、通信、金融支付行业企业资深人士组成；</li>
@@ -77,13 +76,8 @@ Template Name: 关于乐刷
                         <img src="<?php echo get_template_directory_uri()?>/images/about-leshua/5.png">
                   </div>
                 <!--//about-three-pay-->
-                </div>
-                <!--about-register开始-->
-                  <div class="tab-pane" id="about-register">
-
-                  </div>
-                <!--//about-register-->               
-                <img style="margin-left:900px;" src="<?php echo get_template_directory_uri()?>/images/signature.png">
+                </div>              
+                <img style="margin:50px 0 0 900px" src="<?php echo get_template_directory_uri()?>/images/signature.png">
             <!--结束代码-->
 
 			<?php endwhile; // end of the loop. ?>
