@@ -64,7 +64,7 @@ Template Name: 关于乐刷
                 <!--//about-rate-->
                 <!--about-three-pay开始-->
                   <div class="tab-pane" id="about-three-pay">
-                  		<p style="text-indent:2em">深圳市移卡科技有限公司是一家以技术为导向的高科技移动支付公司，针对市场需求，我公司推出三代移动支付终端，第四代终端还在研发中。</p>
+                  		<p style="text-indent:2em"><span style="font-size:20px;font-weight:bold;">深圳市移卡科技有限公司</span>是一家以技术为导向的高科技移动支付公司，针对市场需求，我公司推出三代移动支付终端，第四代终端还在研发中。</p>
                         <ul>
                             <li>公司自2011年初成立，即获得著名VC和腾讯的风险投资，注册资本1500万元。</li>
 							<li>初创团队由来自国内知名互联网、通信、金融支付行业企业资深人士组成；</li>
