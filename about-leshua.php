@@ -50,6 +50,9 @@ Template Name: 关于乐刷
                       <div style="width:40%;float:left;">
                           <img src="<?php echo get_template_directory_uri()?>/images/about-leshua/1.png">
                       </div>
+                      <img src="<?php echo get_template_directory_uri()?>/images/about-leshua/2.jpg">
+                      <img src="<?php echo get_template_directory_uri()?>/images/about-leshua/3.jpg">
+                      <img src="<?php echo get_template_directory_uri()?>/images/about-leshua/4.jpg">
                   </div>
                 <!--//about-pos-->
                 <!--about-rate开始-->
