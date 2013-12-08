@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title><?php if(is_home())echo bloginfo('blogname'); else echo .get_the_title().'|'.bloginfo('blogname'); ?></title>
+        <title><?php if(is_home())echo bloginfo('blogname'); else echo get_the_title().' | '.bloginfo('blogname'); ?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Bootstrap -->
         <link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css" rel="stylesheet" media="screen">
