@@ -29,18 +29,18 @@ Template Name: 关于乐刷
                 <!--about-pos开始-->
                   <div class="tab-pane active" id="about-pos">
                       <div style="width:60%;float:left;">
-				  		<p>乐刷商务版简称乐POS，是一款支持商户进行刷卡收款，并通过银联认证的移动手机刷卡器。由深圳移卡科技有限公司研发。</p>
-                        <ul>收单功能：
+				  		<p style="text-indent:2em">乐刷商务版简称乐POS，是一款支持商户进行刷卡收款，并通过银联认证的移动手机刷卡器。由深圳移卡科技有限公司研发。</p>
+                        <ul><span style="font-weight:bold;">收单功能：</span>
                         	<li>普通收款、撤销</li>
 							<li>快递/COD订单号收款、代理商提货收款、保险保单号收款</li>
                         </ul>
-						<ul>便民服务：
+						<ul><span style="font-weight:bold;">便民服务：</span>
                             <li>查询余额</li>
                             <li>信用卡还款</li>
                             <li>卡卡转账</li>
                             <li>财付通充值、支付宝充值、手机充值、游戏充值、Q币充值</li>
                         </ul>
-                        <ul>对账系统：
+                        <ul><span style="font-weight:bold;">对账系统：</span>
                             <li>交易查询</li>
                             <li>结算查询</li>
                             <li>经营业绩统计分析</li>
