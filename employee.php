@@ -88,7 +88,7 @@ get_header(); ?>
 
 						// The Loop
 						echo '<dl class="dl-horizontal">';
-						echo '<dt><h3>信息公告牌</h3></dt><dd></dd>';
+						echo '<dt><h3>内部公告牌</h3></dt><dd></dd>';
 						while ( $the_query->have_posts() ):
 						$the_query->the_post();
 						?>
