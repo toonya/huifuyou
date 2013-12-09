@@ -20,7 +20,7 @@ span { font-weight:bold; }
 				
             <!--开始代码-->
                 <h3><span>商家QQ：</span>9999999999</h3>
-                <h3><span>联系人：</span>梁经理&nbsp;&nbsp;18666666666</h3>
+                <h3><span>联系人：</span>郝宇&nbsp;&nbsp;18037130126</h3>
                 <h3><span>固定电话：</span>0000-8888888</h3>
                 <h3 style="padding-left:120px;">0000-88888888</h3>  
                 <h3><span>地址：</span>某某市某某区某某路某大厦某号楼某室</h3>
