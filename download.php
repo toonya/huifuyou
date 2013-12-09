@@ -69,16 +69,10 @@ h3 { text-align:left;
                   </div><!--//iphone-download-->
                   <!--pc-download开始-->
                   <div class="tab-pane active" id="pc-download">
-                     <div style="background:lightgrey;padding:20px;margin-bottom:40px;">
                           <h3 style="margin-top:0;">你可以在电脑上下载</h3>
                           <p>第一次在电脑上登陆后，弹出如下对话框，点击“安装”即可使用刷卡收款功能。</p>
                           <img src="<?php echo get_template_directory_uri()?>/images/download/h_ax_az.jpg">
                           <a style="background:#fabe00;color:white;font-size:25px;border-radius:3px;padding:8px;" href="http://pos.yeahka.com/leposweb/home/login.do" target="_blank">点击登录乐刷PC客户端</a>
-                     </div>
-                     <div style="background:lightgrey;padding:20px;">
-                          <h3 style="margin-top:0;">还可以扫一扫直接手机下载</h3>
-
-                     </div>
                   </div>
                 <!--//pc-download-->
                 </div>
