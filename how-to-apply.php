@@ -15,7 +15,7 @@ p { text-align:center; }
             <!--开始代码-->
               <img class="img-responsive center-block" src="<?php echo get_template_directory_uri()?>/images/how-to-apply/how-to-apply.jpg" usemap="#Map">
               <map name="Map">
-                  <area shape="rect" coords="755,25,949,87" href="http://pos.yeahka.com/leposweb/home/select_regist.do" target="_blank">
+                  <area shape="rect" coords="774,31,930,81" href="http://pos.yeahka.com/leposweb/home/select_regist.do" target="_blank">
               </map>
             <!--结束代码-->
 
