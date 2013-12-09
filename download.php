@@ -71,7 +71,7 @@ h3 { text-align:left;
                   <div class="tab-pane" id="pc-download">
                           <h3 style="margin-top:0;">第一次在电脑上登陆后，弹出如下对话框，点击“安装”即可使用刷卡收款功能。</h3>
                           <img src="<?php echo get_template_directory_uri()?>/images/download/h_ax_az.jpg">
-                          <p style="margin-top:50px;"><a style="background:#fabe00;color:white;font-size:25px;border-radius:3px;padding:8px;" href="http://pos.yeahka.com/leposweb/home/login.do" target="_blank">点击登录乐刷PC客户端</a></p>
+                          <p style="margin-top:50px;"><a style="background:#fabe00;color:white;font-family:Microsoft YaHei,微软雅黑;font-size:25px;border-radius:3px;padding:8px;" href="http://pos.yeahka.com/leposweb/home/login.do" target="_blank">点击登录乐刷PC客户端</a></p>
                   </div>
                 <!--//pc-download-->
                 </div>
