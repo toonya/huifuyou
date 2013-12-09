@@ -13,7 +13,10 @@ p { text-align:center; }
 			<?php while ( have_posts() ) : the_post(); ?>
 
             <!--开始代码-->
-              <img class="img-responsive center-block" src="<?php echo get_template_directory_uri()?>/images/how-to-apply/how-to-apply.jpg">
+              <img class="img-responsive center-block" src="<?php echo get_template_directory_uri()?>/images/how-to-apply/how-to-apply.jpg" usemap="#Map">
+              <map name="Map">
+                  <area shape="rect" coords="755,25,949,87" href="http://pos.yeahka.com/leposweb/home/select_regist.do" target="_blank">
+              </map>
             <!--结束代码-->
 
 			<?php endwhile; // end of the loop. ?>
