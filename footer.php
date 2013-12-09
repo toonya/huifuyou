@@ -1,7 +1,7 @@
 
 		<footer style="background:#e0e3e6;padding:20px 0 15px;">
 			<div class="text-center">
-				<p><a href="<?php echo bloginfo('url'); ?>/?page_id=95">关于乐刷商务版</a> I <a href="<?php echo bloginfo('url'); ?>/?page_id=66">关于我们</a> I <a href="<?php echo bloginfo('url'); ?>/?page_id=20" target="_blank">联系我们</a></p>
+				<p><a href="<?php echo bloginfo('url'); ?>/?page_id=95">关于乐刷商务版</a> I <a href="<?php echo bloginfo('url'); ?>/?page_id=66">关于我们</a> I <a href="<?php echo bloginfo('url'); ?>/?page_id=20">联系我们</a></p>
 				<p>版权所有 Copyright(C)2012-2020 您的科技有限公司</p>
 			</div>
 			<div class="hide">
