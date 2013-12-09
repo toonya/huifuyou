@@ -58,8 +58,8 @@ Template Name: 关于乐刷
                 <!--//about-pos-->
                 <!--about-rate开始-->
                   <div class="tab-pane" id="about-rate">
-                  		<p style="text-indent:2em">连锁民生类个体商户或有限公司（包括加油类，超市类，便民类，家用电器销售，手机话费充值）。可以申请0.5%费率。</p>
-                        <p style="text-indent:2em">其他行业可以办理申请0.78%</p>
+                  		<p style="text-indent:2em;font-size:16px;">连锁民生类个体商户或有限公司（包括加油类，超市类，便民类，家用电器销售，手机话费充值）。可以申请<span style="font-weight:bold">0.5%</span>费率。</p>
+                        <p style="text-indent:2em;font-size:16px;">其他行业可以办理申请<span style="font-weight:bold">0.78%</span>费率。</p>
                   </div>
                 <!--//about-rate-->
                 <!--about-three-pay开始-->
