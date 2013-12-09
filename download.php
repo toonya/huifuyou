@@ -65,8 +65,8 @@ h3 { text-align:left;
                           <img class="img-responsive" src="<?php echo get_template_directory_uri()?>/images/download/down_iphone_30.gif">
                           <p class="font-12" style="margin-top:5px;">不支持蓝牙打印功能</p>
                       </div>
-                     </div>
-                  </div><!--//iphone-download-->
+                  </div>
+                  <!--//iphone-download-->
                   <!--pc-download开始-->
                   <div class="tab-pane active" id="pc-download">
                           <h3 style="margin-top:0;">你可以在电脑上下载</h3>
